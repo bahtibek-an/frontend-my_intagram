@@ -1,4 +1,4 @@
-# Frontend-my_intagram
+# Frontend my_instagram
 ## SPECIFICATIONS
 This project is about creating a clone of Instagram.
 
