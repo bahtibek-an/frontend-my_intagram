@@ -1,6 +1,6 @@
+# Instruction how to send project to review
+- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
 # Frontend my_instagram
-## Instruction 
-[How to send project to review RU](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
 
 ## SPECIFICATIONS
 This project is about creating a clone of Instagram.
