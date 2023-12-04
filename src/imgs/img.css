@@ -1,0 +1,12 @@
+.img_slide{
+    transition: 1s;
+    animation: img-slide .5s ease-in-out;
+  }
+  @keyframes img-slide{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,6 @@
+/// <reference types="react" />
+/**
+ * Same as `rc-table` but we modify trigger children update logic instead.
+ */
+declare const _default: <RecordType>(props: import("rc-table").VirtualTableProps<RecordType>) => import("react").JSX.Element;
+export default _default;
