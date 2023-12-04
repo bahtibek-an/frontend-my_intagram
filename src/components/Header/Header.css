@@ -1,0 +1,7 @@
+.header-link.active svg path {
+   @apply fill-text-color-black;
+}
+
+.header-link.active svg path.fill-inner {
+   @apply fill-white;
+}
