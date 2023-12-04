@@ -18,25 +18,25 @@ const Login = () => {
   return (
     <div className='login'>
       <span id='root'>
-        <section class='section-all'>
-          <main class='main' role='main'>
-            <div class='wrapper'>
-              <article class='article'>
-                <div class='content'>
-                  <div class='login-box'>
-                    <div class='header'>
+        <section className='section-all'>
+          <main className='main' role='main'>
+            <div className='wrapper'>
+              <article className='article'>
+                <div className='content'>
+                  <div className='login-box'>
+                    <div className='header'>
                       <img
-                        class='logo'
+                        className='logo'
                         src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png'
                         alt='Instagram'
                       />
                     </div>
-                    <div class='form-wrap'>
+                    <div className='form-wrap'>
                       {error ? (
                         <h2>{error}</h2>
                       ) : (
-                        <form class='form' onSubmit={handleLogin}>
-                          <div class='input-box'>
+                        <form className='form' onSubmit={handleLogin}>
+                          <div className='input-box'>
                             <input
                               type='text'
                               id='name'
@@ -52,7 +52,7 @@ const Login = () => {
                             />
                           </div>
 
-                          <div class='input-box'>
+                          <div className='input-box'>
                             <input
                               type='password'
                               name='password'
@@ -73,13 +73,13 @@ const Login = () => {
                             />
                           </div>
 
-                          <span class='button-box'>
-                            <button class='btn' type='submit' name='submit'>
+                          <span className='button-box'>
+                            <button className='btn' type='submit' name='submit'>
                               Log in
                             </button>
                           </span>
 
-                          <a class='forgot' href=''>
+                          <a className='forgot' href=''>
                             Forgot password?
                           </a>
                         </form>
@@ -87,15 +87,15 @@ const Login = () => {
                     </div>
                   </div>
 
-                  <div class='login-box'>
-                    <p class='text'>
+                  <div className='login-box'>
+                    <p className='text'>
                       Don't have an account?<a href='/sign-in'>Sign up</a>
                     </p>
                   </div>
 
-                  <div class='app'>
+                  <div className='app'>
                     <p>Get the app.</p>
-                    <div class='app-img'>
+                    <div className='app-img'>
                       <a href='https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8'>
                         <img src='https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png' />
                       </a>
@@ -108,9 +108,9 @@ const Login = () => {
               </article>
             </div>
           </main>
-          <footer class='footer' role='contentinfo'>
-            <div class='footer-container'>
-              <nav class='footer-nav' role='navigation'>
+          <footer className='footer' role='contentinfo'>
+            <div className='footer-container'>
+              <nav className='footer-nav' role='navigation'>
                 <ul>
                   <li>
                     <a href=''>About Us</a>
@@ -140,11 +140,11 @@ const Login = () => {
                     <a href=''>Directory</a>
                   </li>
                   <li>
-                    <span class='language'>
+                    <span className='language'>
                       Language
                       <select
                         name='language'
-                        class='select'
+                        className='select'
                         onchange='la(this.value)'>
                         <option value='#'>English</option>
                         <option value='http://ru-instafollow.bitballoon.com'>
@@ -156,7 +156,7 @@ const Login = () => {
                 </ul>
               </nav>
 
-              <span class='footer-logo'>&copy; 2018 Instagram</span>
+              <span className='footer-logo'>&copy; 2018 Instagram</span>
             </div>
           </footer>
         </section>

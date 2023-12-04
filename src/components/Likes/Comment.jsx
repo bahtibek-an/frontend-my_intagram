@@ -103,33 +103,36 @@ export default function Comment({
 
   return (
     <>
-      <div className='comment_container'>
-        <div className="close-con" onClick={() => setCommentModal(false)}>
+    
+      <div className="comment_container">
+      <div className="close-con" onClick={() => setCommentModal(true)}>
           <img src="https://t3.ftcdn.net/jpg/03/64/30/82/360_F_364308273_cV9OrZrqUpZ8En9rC8KxBqaxkVg95ZTY.jpg" />
         </div>
-        <div className='posts_con'>
-          <div className='post__image'>
-            <img src={postImg} alt='' />
+        <div className="posts_con">
+          
+          <div className="post__image">
+            <img src={postImg} alt="" />
           </div>
         </div>
-        <div className='container'>
+        <div className="container">
           {comments !== null &&
             comments.map(
               ({ commentId, user, comment, userName, createdAt }) => (
                 <div key={commentId}>
-                  <div className='border p-2 mt-2 row'>
-                    <div className='col-11'>
+                  <div className="border p-2 mt-2 row">
+                    <div className="col-11">
                       <span
                         className={`badge ${
                           user === currentlyLoggedinUser.uid
                             ? "bg-success"
                             : "bg-primary"
-                        }`}>
-                        <div class='header-img-container '>
+                        }`}
+                      >
+                        <div className="header-img-container ">
                           <img
-                            class='card-header-img'
+                            className="card-header-img"
                             src={createdUserPhoto}
-                            alt=''
+                            alt=""
                           />
                           <h3>{userName}</h3>
                         </div>
@@ -139,10 +142,10 @@ export default function Comment({
                       {comment}
                       <hr />
                     </div>
-                    <div className='col-1'>
+                    <div className="col-1">
                       {user === currentlyLoggedinUser.uid && (
                         <i
-                          className='fa fa-times'
+                          className="fa fa-times"
                           style={{ cursor: "pointer" }}
                           onClick={() =>
                             handleDeleteComment({
@@ -152,7 +155,8 @@ export default function Comment({
                               userName,
                               createdAt,
                             })
-                          }></i>
+                          }
+                        ></i>
                       )}
                     </div>
                   </div>
@@ -163,37 +167,44 @@ export default function Comment({
             <>
               <div className="emoji-input-container">
                 <input
-                  type='text'
-                  className='form-control mt-4 mb-5 w-100 inp-comment'
+                  type="text"
+                  className="form-control mt-4 mb-5 w-100 inp-comment"
                   value={comment}
                   onChange={handleInputChange}
-                  placeholder='Add a comment'
+                  placeholder="Add a comment"
                   onKeyUp={handleChangeComment}
                 />
                 {selectedEmoji && (
                   <span className="selected-emoji">{selectedEmoji}</span>
                 )}
+                <span
+                  className=""
+                  style={{ cursor: "pointer", fontSize: "22px" }}
+                  onClick={() => setShowEmojis(!showEmojis)}
+                  id="basic-addon1"
+                >
+                  😀
+                </span>
+                {showEmojis && (
+                  <div className="emoji-list">
+                    {emojis.map((emoji, index) => (
+                      <span
+                        key={index}
+                        className="emoji p-1 m-1 pb-0 mb-0"
+                        onClick={() => handleEmojiClick(emoji)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        {emoji}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-              <span className="input-group-text btn border-0 bg-white fw-bold" style={{ cursor: "pointer", fontSize: "22px" }} onClick={() => setShowEmojis(!showEmojis)} id="basic-addon1"><ion-icon name="happy"></ion-icon></span>
             </>
           )}
         </div>
-        {showEmojis && (
-          <div className="emoji-list mt-3 border">
-            {emojis.map((emoji, index) => (
-              <span
-                key={index}
-                className="emoji p-1 m-1 pb-0 mb-0"
-                onClick={() => handleEmojiClick(emoji)}
-                style={{ cursor: "pointer" }}
-              >
-                {emoji}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
-      <div className='w-screen'></div>
+      <div className="w-screen"></div>
     </>
   );
 }

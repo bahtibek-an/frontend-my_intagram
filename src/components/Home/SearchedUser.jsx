@@ -10,8 +10,8 @@ const SearchedUser = ({ data }) => {
       <div className='card'>
         {data?.map((el) => (
           <>
-            <div class='header-img-container '>
-              <img class='card-header-img' src={el.userPhoto} alt='' />
+            <div className='header-img-container '>
+              <img className='card-header-img' src={el.userPhoto} alt='' />
               <h3>{el.userName}</h3>
             </div>
           </>

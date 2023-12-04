@@ -19,16 +19,16 @@ const User = ({ user }) => {
   };
   return (
     <>
-      <header class='grid main-header'>
-        <div class='flex-container header-container'>
-          <span class='logo logo-nav header-item'>Instagram</span>
+      <header className='grid main-header'>
+        <div className='flex-container header-container'>
+          <span className='logo logo-nav header-item'>Instagram</span>
 
-          <div class='header-item searchbar '>
+          <div className='header-item searchbar '>
             <label for='searchbar '>
-              <div class='flex-container'>
-                <div class='search-icon-container'>
+              <div className='flex-container'>
+                <div className='search-icon-container'>
                   <svg
-                    class='search-nav-icon'
+                    className='search-nav-icon'
                     viewBox='0 0 512 512'
                     width='100'
                     title='search'>
@@ -39,29 +39,29 @@ const User = ({ user }) => {
                 <input
                   id='searchbar'
                   type='text'
-                  class='searchbar-input'
+                  className='searchbar-input'
                   placeholder='Search...'
                 />
               </div>
             </label>
           </div>
-          <nav class='header-item main-nav'>
-            <ul class='navbar flex-container'>
-              <li class='navbar-item'>
+          <nav className='header-item main-nav'>
+            <ul className='navbar flex-container'>
+              <li className='navbar-item'>
                 <a href='/home'>
                   <HomeIcon sx={{ fontSize: 30 }} />
                 </a>
               </li>
-              <li class='navbar-item'>
+              <li className='navbar-item'>
                 <a href='/home'>
                   <AddBoxIcon sx={{ fontSize: 30 }} />
                 </a>
               </li>
 
-              <li class='navbar-item no-hover'>
+              <li className='navbar-item no-hover'>
                 <img style={{ marginBottom: "8px"}} src={user?.photoURL} alt='' />
               </li>
-              <li class='navbar-item'>
+              <li className='navbar-item'>
                 <LogoutIcon sx={{ fontSize: 30 }} onClick={handleLogOut} />
               </li>
             </ul>
@@ -70,45 +70,45 @@ const User = ({ user }) => {
       </header>
       <div className='userprofile'>
         <header>
-          <div class='container'>
-            <div class='profile'>
-              <div class='profile-image'>
+          <div className='container'>
+            <div className='profile'>
+              <div className='profile-image'>
                 <img src={user?.photoURL} alt='' />
               </div>
 
-              <div class='profile-user-settings'>
-                <h1 class='profile-user-name'>{user?.displayName}</h1>
+              <div className='profile-user-settings'>
+                <h1 className='profile-user-name'>{user?.displayName}</h1>
 
                 <button
-                  class=' profile-edit-btn'
+                  className=' profile-edit-btn'
                   onClick={() => setUserSetting(!userSetting)}>
                   Edit Profile
                 </button>
 
                 <button
-                  class=' profile-settings-btn'
+                  className=' profile-settings-btn'
                   aria-label='profile settings'>
                   <SettingsIcon />
                 </button>
               </div>
 
-              <div class='profile-stats'>
+              <div className='profile-stats'>
                 <ul>
                   <li>
-                    <span class='profile-stat-count'>1</span> posts
+                    <span className='profile-stat-count'>1</span> posts
                   </li>
                   <li>
-                    <span class='profile-stat-count'>0</span> followers
+                    <span className='profile-stat-count'>0</span> followers
                   </li>
                   <li>
-                    <span class='profile-stat-count'>0</span> following
+                    <span className='profile-stat-count'>0</span> following
                   </li>
                 </ul>
               </div>
 
-              <div class='profile-bio'>
+              <div className='profile-bio'>
                 <p>
-                  <span class='profile-real-name'>{user?.displayName}</span>{" "}
+                  <span className='profile-real-name'>{user?.displayName}</span>{" "}
                 </p>
               </div>
             </div>
@@ -116,25 +116,25 @@ const User = ({ user }) => {
         </header>
 
         <main>
-          <div class='container'>
-            <div class='gallery'>
+          <div className='container'>
+            <div className='gallery'>
               {userPosts.map((el) => {
-                <div class='gallery-item' tabindex='0'>
+                <div className='gallery-item' tabindex='0'>
                   <img
                     src='https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=500&h=500&fit=crop'
-                    class='gallery-image'
+                    className='gallery-image'
                     alt=''
                   />
 
-                  <div class='gallery-item-info'>
+                  <div className='gallery-item-info'>
                     <ul>
-                      <li class='gallery-item-likes'>
-                        <span class='visually-hidden'>Likes:</span>
-                        <i class='fas fa-heart' aria-hidden='true'></i> 34
+                      <li className='gallery-item-likes'>
+                        <span className='visually-hidden'>Likes:</span>
+                        <i className='fas fa-heart' aria-hidden='true'></i> 34
                       </li>
-                      <li class='gallery-item-comments'>
-                        <span class='visually-hidden'>Comments:</span>
-                        <i class='fas fa-comment' aria-hidden='true'></i> 1
+                      <li className='gallery-item-comments'>
+                        <span className='visually-hidden'>Comments:</span>
+                        <i className='fas fa-comment' aria-hidden='true'></i> 1
                       </li>
                     </ul>
                   </div>

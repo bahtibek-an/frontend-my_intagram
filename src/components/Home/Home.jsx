@@ -8,19 +8,26 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CreatePost from "../Post/CreatePost/CreatePost";
 import Likes from "../Likes/Likes";
-import { collection, onSnapshot, orderBy, query, getDoc, deleteDoc } from "firebase/firestore";
+import {
+  collection,
+  onSnapshot,
+  orderBy,
+  query,
+  getDoc,
+  deleteDoc,
+} from "firebase/firestore";
 import { firestore } from "../../Api/firebase";
 import { useSelector } from "react-redux";
 import Comment from "../Likes/Comment";
 import SearchedUser from "./SearchedUser";
 import { auth } from "../../Api/firebase";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Home = ({ user }) => {
   const { postLoading } = useSelector((state) => state.posts);
   const [modalState, setModalState] = useState(false);
-  const [commentModal, setCommentModal] = useState(false);
+  const [commentModal, setCommentModal] = useState(true);
   const [article, setArticles] = useState(null);
   const [searchTerm, setSearchTerm] = useState(null);
   const [users, setUsers] = useState([]);
@@ -58,16 +65,32 @@ const Home = ({ user }) => {
   }, [user]);
   // console.log(typeof searchTerm);
 
-  const emojis = ["😀", "😍", "😎", "🔥", "👍", "❤️", "👏", "🙌", "🎉", "🥳", "🤩", "🤗"];
+  const emojis = [
+    "😀",
+    "😍",
+    "😎",
+    "🔥",
+    "👍",
+    "❤️",
+    "👏",
+    "🙌",
+    "🎉",
+    "🥳",
+    "🤩",
+    "🤗",
+  ];
 
   const handleDeletePost = async (postId) => {
+    console.log("hello")
+    console.log(postId);
     try {
       // Check if the current user is the owner of the post
       const postRef = collection(firestore, "Articles", postId);
       const postDoc = await getDoc(postRef);
+      
 
       if (postDoc.exists() && postDoc.data().createdBy === user.displayName) {
-        // Delete the post
+       
         await deleteDoc(postRef);
       } else {
         alert("You are not the owner of this post.");
@@ -76,7 +99,6 @@ const Home = ({ user }) => {
       console.error("Error deleting post:", error);
     }
   };
-
 
   const handleInputChange = (event) => {
     const newSearchTerm = event.target.value;
@@ -90,117 +112,135 @@ const Home = ({ user }) => {
   };
   return (
     <>
-      <div className='home'>
-        <header class='grid main-header'>
-          <div class='flex-container header-container'>
-            <span class='logo logo-nav header-item'><a href="/home">Instagram</a></span>
+      <div className="home">
+        <header className="grid main-header">
+          <div className="flex-container header-container">
+            <span className="logo logo-nav header-item">
+              <a href="/home">Instagram</a>
+            </span>
 
-            <div class='header-item searchbar '>
-              <label for='searchbar '>
-                <div class='flex-container position-relative'>
-                  <div class='search-icon-container'>
+            <div className="header-item searchbar ">
+              <label for="searchbar ">
+                <div className="flex-container position-relative">
+                  <div className="search-icon-container">
                     <svg
-                      class='search-nav-icon'
-                      viewBox='0 0 512 512'
-                      width='100'
-                      title='search'>
-                      <path d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z' />
+                      className="search-nav-icon"
+                      viewBox="0 0 512 512"
+                      width="100"
+                      title="search"
+                    >
+                      <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
                     </svg>
                   </div>
 
                   <input
-                    id='searchbar'
-                    type='text'
-                    class='searchbar-input'
-                    placeholder='Search...'
+                    id="searchbar"
+                    type="text"
+                    className="searchbar-input"
+                    placeholder="Search..."
                     onChange={handleInputChange}
                   />
-                  {searchTerm ? <SearchedUser data={filteredData}/> : null}
+                  {searchTerm ? <SearchedUser data={filteredData} /> : null}
                 </div>
               </label>
             </div>
-            <nav class='header-item main-nav'>
-              <ul class='navbar flex-container'>
-              <li class='navbar-item'>
-                <a href='/home'>
-                  <HomeIcon sx={{ fontSize: 30 }} />
-                </a>
-              </li>
-                <li
-                  class='navbar-item'
-                  onClick={() => setModalState(!modalState)}>
-                  <AddBoxIcon sx={{ fontSize: 30 }} />
-                </li>
-                <li class='navbar-item no-hover'>
-                  <a href='/profile' >
-                    <img style={{ marginBottom: "8px"}} src={user?.photoURL} alt='' />
+            <nav className="header-item main-nav">
+              <ul className="navbar flex-container">
+                <li className="navbar-item">
+                  <a href="/home">
+                    <HomeIcon sx={{ fontSize: 30 }} />
                   </a>
                 </li>
-                <li class='navbar-item'>
-                <LogoutIcon sx={{ fontSize: 30 }} onClick={handleLogOut} />
-              </li>
+                <li
+                  className="navbar-item"
+                  onClick={() => setModalState(!modalState)}
+                >
+                  <AddBoxIcon sx={{ fontSize: 30 }} />
+                </li>
+                <li className="navbar-item no-hover">
+                  <a href="/profile">
+                    <img
+                      style={{ marginBottom: "8px" }}
+                      src={user?.photoURL}
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li className="navbar-item">
+                  <LogoutIcon sx={{ fontSize: 30 }} onClick={handleLogOut} />
+                </li>
               </ul>
             </nav>
           </div>
         </header>
 
-        <section class='main-content grid'>
-          <div class='main-gallery-wrapper flex-container'>
+        <section className="main-content grid">
+          <div className="main-gallery-wrapper flex-container">
             {article?.map((el) => (
-              <div key={el.id} class='card-wrapper flex-container'>
-                <div class='card-header grid'>
-                  <div class='header-img-container flex-container'>
+              <div key={el.id} className="card-wrapper flex-container">
+                <div className="card-header grid">
+                  <div className="header-img-container flex-container">
                     <img
-                      class='card-header-img'
+                      className="card-header-img"
                       src={el.createdUserPhoto}
-                      alt=''
+                      alt=""
                     />
                   </div>
-                  <div className="d-flex">
-                  <span class='card-title'>{el.createdBy}</span>
+                  <div style={{ display: "flex" }}>
+                    <div style={{ display: "block" }}>
+                      <span className="card-title">{el.createdBy}</span>
+                      <br />
+                      <span className="card-subtitle">{el.title}</span>
+                    </div>
+                    <div style={{ marginLeft: '240px', color: 'red', fontSize: '14px', cursor: 'pointer'}}>
+                      {el.createdBy === user.displayName && (
+                        <a
+                          className="card-icon card-icon-right"
+                          onClick={() => handleDeletePost(el.id)}
+                        >
+                          <i className="bi bi-trash"></i> Delete
+                        </a>
+                      )}
+                    </div>
+                  </div>
 
-                  <span class='card-subtitle'>{el.title}</span>
-                  <div>
-                  {el.createdBy === user.displayName && (
-                    <button class='card-icon card-icon-right' onClick={() => handleDeletePost(el.id)}>
-                      <i class='bi bi-trash'></i> Delete
-                    </button>
-                  )}
-                  </div>
-                  </div>
-                
-                  <div class='card-opt-btn flex-container'>
-                    <i class='bi bi-three-dots'></i>
+                  <div className="card-opt-btn flex-container">
+                    <i className="bi bi-three-dots"></i>
                   </div>
                 </div>
-                <div class='card-img-container'>
-                  <img src={el.imageUrl} class='card-img' alt='' />
+                <div className="card-img-container">
+                  <img src={el.imageUrl} className="card-img" alt="" />
                 </div>
-                <span class='' style={{ display: 'flex', justifyContent: 'flex-end'}}>{el.createdAt.toDate().toLocaleString()}</span>
-                <div class='card-data flex-container'>
-                
-                  <div class='card-icons flex-container'>
-                    <span class='card-icon card-icon-left'>
+                <span
+                  className=""
+                  style={{ display: "flex", justifyContent: "flex-end" }}
+                >
+                  {el.createdAt.toDate().toLocaleString()}
+                </span>
+                <div className="card-data flex-container">
+                  <div className="card-icons flex-container">
+                    <span className="card-icon card-icon-left">
                       <Likes id={el.id} likes={el.likes} />
                     </span>
-                    <span class='card-icon card-icon-left'>
-                      <i class='bi bi-chat'></i>
+                    <span className="card-icon card-icon-left">
+                      <i className="bi bi-chat"></i>
                     </span>
-                    <span class='card-icon card-icon-left'>
-                      <i class='bi bi-send'></i>
+                    <span className="card-icon card-icon-left">
+                      <i className="bi bi-send"></i>
                     </span>
-                    <span class='card-icon card-icon-right'>
-                      <i class='bi bi-bookmark'></i>
+                    <span className="card-icon card-icon-right">
+                      <i className="bi bi-bookmark"></i>
                     </span>
                   </div>
-                  <span class='bold card-text'>{} Likes</span>
-                  <span class='card-text'>
-                    <span class='bold title-margin'>{el.createdBy}</span>
+                  <span className="bold card-text">{} Likes</span>
+                  <span className="card-text">
+                    <span className="bold title-margin">{el.createdBy}</span>
                     {el.description}
                   </span>
                   <span
-                    class='card-text comments-btn'
-                    onClick={() => setCommentModal(el.id)}>
+                    className="card-text comments-btn"
+                    onClick={() => setCommentModal(el.id)}
+                  >
                     See more comments
                   </span>
                   {commentModal == el.id ? (
@@ -211,52 +251,54 @@ const Home = ({ user }) => {
                       createdUserPhoto={el.createdUserPhoto}
                     />
                   ) : null}
-                  <span class='card-time'></span>
-                  <div class='add-comment-container flex-container'>
-                    <span class='card-icon'>
-                      <i class='bi bi-emoji-smile'></i>
+                  <span className="card-time"></span>
+                  <div className="add-comment-container flex-container">
+                    <span className="card-icon">
+                      <i className="bi bi-emoji-smile"></i>
                     </span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div class='sidebar'>
-            <div class='sidebar-menu-container'>
-              <div class='sidebar-card sidebar-header grid'>
+          <div className="sidebar">
+            <div className="sidebar-menu-container">
+              <div className="sidebar-card sidebar-header grid">
                 <img
                   src={user?.photoURL}
-                  alt=''
-                  class='sidebar-img sidebar-hd-img'
+                  alt=""
+                  className="sidebar-img sidebar-hd-img"
                 />
-                <span class='sidebar-title card-title'>
+                <span className="sidebar-title card-title">
                   {user ? user?.displayName : null}
                 </span>
-                <span class='card-subtitle sidebar-subtitle'>
+                <span className="card-subtitle sidebar-subtitle">
                   {" "}
                   {user ? user?.email : null}
                 </span>
-                <span class='sidebar-btn'><a href="/profile">Change</a></span>
+                <span className="sidebar-btn">
+                  <a href="/profile">Change</a>
+                </span>
               </div>
-              <div class='suggestions-header grid'>
-                <span class='suggestions-text'>Suggestions for you</span>
-                <span class='sidebar-btn-alt'>See all</span>
+              <div className="suggestions-header grid">
+                <span className="suggestions-text">Suggestions for you</span>
+                <span className="sidebar-btn-alt">See all</span>
               </div>
               {users
-          .filter((el) => el.id !== user.uid)
-          .map((el) => (
-            <div class='sidebar-card sidebar-card-alt grid' key={el.id}>
-              <img
-                src={el.userPhoto}
-                alt=''
-                class='sidebar-img side-bar-img-alt'
-              />
-              <span class='sidebar-title card-title'>{el.userName}</span>
-              <Link to={`/${el.userName}`} class='sidebar-btn'>
-                Follow
-              </Link>
-            </div>
-          ))}
+                .filter((el) => el.id !== user.uid)
+                .map((el) => (
+                  <div className="sidebar-card sidebar-card-alt grid" key={el.id}>
+                    <img
+                      src={el.userPhoto}
+                      alt=""
+                      className="sidebar-img side-bar-img-alt"
+                    />
+                    <span className="sidebar-title card-title">{el.userName}</span>
+                    <Link to={`/${el.userName}`} className="sidebar-btn">
+                      Follow
+                    </Link>
+                  </div>
+                ))}
             </div>
           </div>
         </section>
