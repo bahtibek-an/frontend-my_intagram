@@ -1,0 +1,24 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.App { 
+    overflow-x: hidden;
+}
+
+.user_round {
+    border-radius: 50%;
+}
+
+
+.fon {
+    background-color: #fff;
+    color: #000;
+}
+
+input:focus {
+    outline: none;
+}

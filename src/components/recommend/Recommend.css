@@ -1,0 +1,60 @@
+.recommendations {
+    display: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb ;
+    overflow-x: scroll;
+}
+
+.recommendations > div {
+    display: flex;
+    align-items: center;
+    width: 470px;
+    overflow-x: scroll;
+}
+
+.header_rec {
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.recommendations button {
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+}
+
+.user_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 167px;
+    height: 242px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 30px 10px 0px 10px;
+    margin-right: 10px;
+}
+
+.clear_btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.user_container h4, p {
+    margin: 0;
+}
+.user_container button {
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .recommendations {
+        display: block;
+    }
+}

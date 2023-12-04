@@ -1,0 +1,52 @@
+.search_area h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.search input {
+    padding: 0px 16px;
+    background-color: #efefef;
+    width: 268px;
+    height: 36px;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.search button {
+    position: relative;
+    bottom: 0.5px;
+    padding: 0;
+    border: none;
+    height: 36px;
+    width: 36px;
+    border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
+}
+
+
+.line {
+    position: relative;
+    left: -26px;
+    margin-top: 20px;
+    width: 400px;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.back_text {
+    padding-top: 40vh;
+    text-align: center;
+    color: #737373;
+}
+
+.search_user {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search_user img {
+    margin-right: 10px;
+}

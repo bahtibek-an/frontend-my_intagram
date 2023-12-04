@@ -1,0 +1,19 @@
+.more  {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 295px;
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 0px #aaaaaa;
+}
+
+.more > div {
+    padding: 16px
+}
+
+@media  screen and (min-width: 1400px) {
+    .more {
+        right: 300px;
+    }
+}

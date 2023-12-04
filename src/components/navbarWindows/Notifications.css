@@ -1,0 +1,31 @@
+.subs {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0px; 
+}
+.user {
+    margin: 0 5px;
+}
+.btn button {
+    padding: 7px 16px;
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back {
+    display: none;
+    margin-right: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .back {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,32 @@
+.suggestions {
+    margin-top: 50px;
+    margin-left: 40px;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.grey {
+    color: #737373;
+}
+
+.suggestion_user {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recomendation p {
+    margin: 0;
+}
+
+.suggestion_user button {
+    color: #0095f6;
+    background-color: #fff;
+    border: none;
+}
+
+@media screen and (max-width: 1300px) {
+    
+}

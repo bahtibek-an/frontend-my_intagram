@@ -1,0 +1,96 @@
+.share {
+    position: absolute;
+    bottom: 0;
+    width: 343px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px 0px #aaaaaa;
+}
+
+.share_search_div {
+    padding: 0px 16px;
+}
+
+.header_coment {
+    text-align: center;
+}
+
+.share_search {
+    padding: 0px 16px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share_search input {
+    padding: 4px 12px 4px 20px;
+    width: 206px;
+    border: 0px solid;
+}
+
+.share_search input:focus {
+    outline: none;
+}
+
+.share_users {
+    padding: 0px 32px;
+    height: 396px;
+    overflow-y: scroll;
+}
+
+.share_user {
+    padding: 8px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.round {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.round input {
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    width: 24px;
+    height: 24px;
+}
+
+.share_send {
+    padding: 16px 32px;
+}
+
+.share_send button {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0095f6;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .share {
+        right: 25px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .share {
+        left: 25px;
+    }
+}

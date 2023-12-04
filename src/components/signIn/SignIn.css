@@ -1,0 +1,64 @@
+.loginpage_signin {
+    margin-top: 25px;
+}
+
+.loginpage_text {
+    width: 258px;
+    height: 36px;
+    margin: 5px;
+    border: 1px solid #DBDBDB;
+    background-color: #FAFAFA;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.login_button {
+    width: 270px;
+    height: 36px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    border: 1px solid #0395f6;
+    background-color: #0395f6;
+    color: #fff;
+}
+
+.login_ordiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login_dividor {
+    width: 80px;
+    height: 0px;
+    margin-top: 10px; 
+    border: 1px solid #DBDBDB;
+}
+
+.login_or {
+    margin: 0px 10px;
+    font-weight: bold;
+    color: #8e8e8e;
+}
+
+.f_logo {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.login_fb {
+    margin-top: 30px;
+    color: #395185;
+    font-weight: bold;
+}
+
+.login_forgt {
+    color: #00376B;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}

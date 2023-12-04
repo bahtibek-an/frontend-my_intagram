@@ -1,0 +1,23 @@
+.navbar_home {
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 1;
+}
+
+.logo {
+    width: 105px;
+    margin-bottom: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar_home {
+        display: flex;
+    }
+}

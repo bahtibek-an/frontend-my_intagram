@@ -1,0 +1,102 @@
+.reels {
+    position: relative;
+    margin-top: 30px;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reel {
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.reels_video{
+    max-width: 470px; 
+    height: auto;
+    position: relative;
+}
+
+.sound {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.userr {
+    width: 24px;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+}
+
+.reels_video p {
+    position: absolute;
+    bottom: 43px;
+    left: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.reels_video button {
+    position: absolute;
+    bottom: 43px;
+    right: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reels video {
+    width: 100%;
+}
+
+.reels_icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon_div {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon_div:hover .img:not(.like), .icon_div:hover small {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.like:active {
+    transform: scale(1.3);
+    opacity: 1.0;
+}
+
+.coment .comment_div {
+    visibility: visible;
+}
+
+.share_div .share {
+    visibility: visible;
+}
+
+
+
+
+
+
+

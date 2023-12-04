@@ -1,0 +1,328 @@
+.profile {
+    width: 780px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_user {
+    margin-bottom: 30px;
+}
+
+.p_user-img {
+    display: inline-block;
+    width: 292px;
+    height: 150px;
+    padding: 0 30px 0 0;
+}
+
+.p_user-img button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.p_user-img img {
+    width: 150px;
+    height: 150px;
+}
+
+.p_user-desc {
+    display: inline-block;
+    position: relative;
+    bottom: 110px;
+}
+
+.p_user-desc p {
+    display: inline-block;
+    font-size: 23px;
+    margin-right: 16px;
+}
+
+.p_user-desc > div {
+    display: inline-block;
+}
+
+.p_user-desc a {
+    text-decoration: none;
+    font-weight: 550;
+    padding: 8px 16px;
+    margin-right: 8px;
+    background-color: #efefef;
+    border-radius: 5px;
+    color: #000;
+}
+
+.p_user-desc img {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+.p_info {
+    margin-left: 292px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    bottom: 110px
+}
+
+.p_name { 
+    margin-left: 292px;
+    position: relative;
+    bottom: 110px
+}
+
+.p_info > div {
+    margin-right: 20px;
+}
+
+.p_info > a {
+    margin-right: 20px;
+    padding: 0;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.p_info > div p{
+    font-size: 18px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.p_info > a p{
+    font-family: 'Times New Roman';
+    font-size: 18px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.p_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p_nav a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    padding-top: 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #737373;
+}
+
+.p_nav a.active {
+    border-top: 1px solid #dbdbdb;
+}
+
+.p_nav img {
+    margin-right: 10px;
+    width: 10px;
+}
+
+.p_main {
+    height: 700px;
+}
+
+.upload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.upload div {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.upload div h2, h3 {
+    text-align: center;
+    margin: 0;
+    padding: 25px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.upload div button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f00;
+    cursor: pointer;
+}
+
+.upload>img, .upload > a > img {
+    width: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.upload div button:last-child{
+    border-radius: 0 0 20px 20px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+}
+
+.followers {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.follower {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follower p {
+    margin-left: 10px;
+}
+
+.follower div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.f_btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #d2d1d1;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+} 
+
+.f_btn_b {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0095f6;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.following {
+    color: #0095f6;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.searchFollowers input {
+    box-sizing: border-box;
+    margin: 10px;
+    width: 380px;
+    padding: 8px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 5px;
+}
+
+.unfollow {
+    text-align: center;
+}
+
+.unfollow p {
+    padding: 20px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.unfollow img {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 880px) {
+
+    .profile {
+        width: 100%;
+    }
+
+    .p_user-img {
+        width: 77px;
+        height: 77px;
+        margin-right: 20px;
+    }
+
+    .p_user-img img {
+        width: 77px;
+        height: 77px;
+    }
+
+    .p_user-desc{
+        bottom: 20px;
+    }
+
+    .p_user-desc > div {
+        margin-top: 10px;
+        display: block;
+    }
+    
+
+    .p_name {
+       bottom: 50px;
+       margin-left: 0; 
+    }
+
+    .p_info {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0;
+        bottom: -90px;
+    }
+
+    .p_info > div p,  .p_info > button p{
+        text-align: center;
+        font-size: 15px;
+        display: block; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .p_nav p {
+        display: none;
+    }
+
+    .p_nav img {
+        width:20px;
+    }
+
+    .p_user-desc {
+        top: 5px
+    }
+
+    .p_nav a {
+        margin: 0 20px;
+    }
+}
