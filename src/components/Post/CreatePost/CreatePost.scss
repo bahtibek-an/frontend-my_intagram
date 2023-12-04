@@ -1,0 +1,34 @@
+/** @format */
+
+.modal-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
+  height: 500px;
+  max-width: 600px;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  .selected__img__container {
+    img {
+      width: 100%;
+    }
+    width: 400px;
+  }
+}
+.w-screen {
+  background-color: rgba(0, 0, 0, 0.294);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}

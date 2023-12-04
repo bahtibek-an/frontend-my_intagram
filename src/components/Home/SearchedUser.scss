@@ -1,0 +1,20 @@
+.search-modal{
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 57%;
+    height: 283px;
+    max-width: 434px;
+    z-index: 10;
+    background-color: #fff;
+  .card{
+    .header-img-container {
+        width: 70px;
+        height: 70px;
+        margin: 20px;
+        display: flex;
+    }
+  }
+}
