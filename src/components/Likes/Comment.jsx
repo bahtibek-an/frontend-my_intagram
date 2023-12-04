@@ -1,5 +1,3 @@
-/** @format */
-
 import {
   arrayRemove,
   arrayUnion,
@@ -13,11 +11,21 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { v4 as uuidv4 } from "uuid";
 import { auth } from "../../Api/firebase";
 import "./Comment.scss";
-export default function Comment({ id, commentp, postImg, createdUserPhoto , setCommentModal}) {
+
+export default function Comment({
+  id,
+  commentp,
+  postImg,
+  createdUserPhoto,
+  setCommentModal,
+}) {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [currentlyLoggedinUser] = useAuthState(auth);
+  const [showEmojis, setShowEmojis] = useState(false);
+  const [newComment, setNewComment] = useState("");
   const commentRef = doc(firestore, "Articles", id);
+  const [selectedEmoji, setSelectedEmoji] = useState(null); // New state to store the selected emoji
   useEffect(() => {
     const docRef = doc(firestore, "Articles", id);
     onSnapshot(docRef, (snapshot) => {
@@ -25,21 +33,59 @@ export default function Comment({ id, commentp, postImg, createdUserPhoto , setC
     });
   }, []);
 
+  const handleEmojiSelect = (emoji) => {
+    setSelectedEmoji(emoji);
+    setShowEmojis(false);
+  };
+
+  const handleInputChange = (e) => {
+    const inputText = e.target.value;
+    const lastChar = inputText.slice(-1);
+
+    if (lastChar === " " && selectedEmoji) {
+      setComment(`${comment}${selectedEmoji} `);
+      setSelectedEmoji(null);
+    } else {
+      setComment(inputText);
+    }
+  };
+
+  const handleEmojiClick = (emoji) => {
+    setSelectedEmoji(emoji);
+  };
+
   const handleChangeComment = (e) => {
     if (e.key === "Enter") {
+      const finalComment = `${comment}${selectedEmoji || ""}`; // Include selected emoji in the comment
       updateDoc(commentRef, {
         comments: arrayUnion({
           user: currentlyLoggedinUser.uid,
           userName: currentlyLoggedinUser.displayName,
-          comment: comment,
+          comment: finalComment,
           createdAt: new Date(),
           commentId: uuidv4(),
         }),
       }).then(() => {
         setComment("");
+        setSelectedEmoji(null); // Clear selected emoji after posting the comment
       });
     }
   };
+
+  const emojis = [
+    "😀",
+    "😍",
+    "😎",
+    "🔥",
+    "👍",
+    "❤️",
+    "👏",
+    "🙌",
+    "🎉",
+    "🥳",
+    "🤩",
+    "🤗",
+  ];
 
   // delete comment function
   const handleDeleteComment = (comment) => {
@@ -58,9 +104,9 @@ export default function Comment({ id, commentp, postImg, createdUserPhoto , setC
   return (
     <>
       <div className='comment_container'>
-    <div className="close-con" onClick={()=>setCommentModal(false)}>
-        <img src="https://t3.ftcdn.net/jpg/03/64/30/82/360_F_364308273_cV9OrZrqUpZ8En9rC8KxBqaxkVg95ZTY.jpg" />
-    </div>
+        <div className="close-con" onClick={() => setCommentModal(false)}>
+          <img src="https://t3.ftcdn.net/jpg/03/64/30/82/360_F_364308273_cV9OrZrqUpZ8En9rC8KxBqaxkVg95ZTY.jpg" />
+        </div>
         <div className='posts_con'>
           <div className='post__image'>
             <img src={postImg} alt='' />
@@ -85,7 +131,7 @@ export default function Comment({ id, commentp, postImg, createdUserPhoto , setC
                             src={createdUserPhoto}
                             alt=''
                           />
-                        <h3>{userName}</h3>
+                          <h3>{userName}</h3>
                         </div>
 
                         <br />
@@ -114,20 +160,38 @@ export default function Comment({ id, commentp, postImg, createdUserPhoto , setC
               )
             )}
           {currentlyLoggedinUser && (
-            <input
-              type='text'
-              className='form-control mt-4 mb-5 w-100 inp-comment'
-              value={comment}
-              onChange={(e) => {
-                setComment(e.target.value);
-              }}
-              placeholder='Add a comment'
-              onKeyUp={(e) => {
-                handleChangeComment(e);
-              }}
-            />
+            <>
+              <div className="emoji-input-container">
+                <input
+                  type='text'
+                  className='form-control mt-4 mb-5 w-100 inp-comment'
+                  value={comment}
+                  onChange={handleInputChange}
+                  placeholder='Add a comment'
+                  onKeyUp={handleChangeComment}
+                />
+                {selectedEmoji && (
+                  <span className="selected-emoji">{selectedEmoji}</span>
+                )}
+              </div>
+              <span className="input-group-text btn border-0 bg-white fw-bold" style={{ cursor: "pointer", fontSize: "22px" }} onClick={() => setShowEmojis(!showEmojis)} id="basic-addon1"><ion-icon name="happy"></ion-icon></span>
+            </>
           )}
         </div>
+        {showEmojis && (
+          <div className="emoji-list mt-3 border">
+            {emojis.map((emoji, index) => (
+              <span
+                key={index}
+                className="emoji p-1 m-1 pb-0 mb-0"
+                onClick={() => handleEmojiClick(emoji)}
+                style={{ cursor: "pointer" }}
+              >
+                {emoji}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
       <div className='w-screen'></div>
     </>

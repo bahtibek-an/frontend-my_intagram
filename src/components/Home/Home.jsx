@@ -8,7 +8,7 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CreatePost from "../Post/CreatePost/CreatePost";
 import Likes from "../Likes/Likes";
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query, getDoc, deleteDoc } from "firebase/firestore";
 import { firestore } from "../../Api/firebase";
 import { useSelector } from "react-redux";
 import Comment from "../Likes/Comment";
@@ -57,6 +57,26 @@ const Home = ({ user }) => {
     });
   }, [user]);
   // console.log(typeof searchTerm);
+
+  const emojis = ["😀", "😍", "😎", "🔥", "👍", "❤️", "👏", "🙌", "🎉", "🥳", "🤩", "🤗"];
+
+  const handleDeletePost = async (postId) => {
+    try {
+      // Check if the current user is the owner of the post
+      const postRef = collection(firestore, "Articles", postId);
+      const postDoc = await getDoc(postRef);
+
+      if (postDoc.exists() && postDoc.data().createdBy === user.displayName) {
+        // Delete the post
+        await deleteDoc(postRef);
+      } else {
+        alert("You are not the owner of this post.");
+      }
+    } catch (error) {
+      console.error("Error deleting post:", error);
+    }
+  };
+
 
   const handleInputChange = (event) => {
     const newSearchTerm = event.target.value;
@@ -136,9 +156,19 @@ const Home = ({ user }) => {
                       alt=''
                     />
                   </div>
+                  <div className="d-flex">
                   <span class='card-title'>{el.createdBy}</span>
 
                   <span class='card-subtitle'>{el.title}</span>
+                  <div>
+                  {el.createdBy === user.displayName && (
+                    <button class='card-icon card-icon-right' onClick={() => handleDeletePost(el.id)}>
+                      <i class='bi bi-trash'></i> Delete
+                    </button>
+                  )}
+                  </div>
+                  </div>
+                
                   <div class='card-opt-btn flex-container'>
                     <i class='bi bi-three-dots'></i>
                   </div>
@@ -146,7 +176,9 @@ const Home = ({ user }) => {
                 <div class='card-img-container'>
                   <img src={el.imageUrl} class='card-img' alt='' />
                 </div>
+                <span class='' style={{ display: 'flex', justifyContent: 'flex-end'}}>{el.createdAt.toDate().toLocaleString()}</span>
                 <div class='card-data flex-container'>
+                
                   <div class='card-icons flex-container'>
                     <span class='card-icon card-icon-left'>
                       <Likes id={el.id} likes={el.likes} />
