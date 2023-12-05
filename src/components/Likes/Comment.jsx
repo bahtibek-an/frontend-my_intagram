@@ -33,6 +33,10 @@ export default function Comment({
     });
   }, []);
 
+  const closeModal = () => {
+    setCommentModal(null); // Set the state to null or false based on your implementation
+  };
+
   const handleEmojiSelect = (emoji) => {
     setSelectedEmoji(emoji);
     setShowEmojis(false);
@@ -105,64 +109,15 @@ export default function Comment({
     <>
     
       <div className="comment_container">
-      <div className="close-con" onClick={() => setCommentModal(true)}>
-          <img src="https://t3.ftcdn.net/jpg/03/64/30/82/360_F_364308273_cV9OrZrqUpZ8En9rC8KxBqaxkVg95ZTY.jpg" />
-        </div>
         <div className="posts_con">
           
           <div className="post__image">
             <img src={postImg} alt="" />
           </div>
         </div>
+        
         <div className="container">
-          {comments !== null &&
-            comments.map(
-              ({ commentId, user, comment, userName, createdAt }) => (
-                <div key={commentId}>
-                  <div className="border p-2 mt-2 row">
-                    <div className="col-11">
-                      <span
-                        className={`badge ${
-                          user === currentlyLoggedinUser.uid
-                            ? "bg-success"
-                            : "bg-primary"
-                        }`}
-                      >
-                        <div className="header-img-container ">
-                          <img
-                            className="card-header-img"
-                            src={createdUserPhoto}
-                            alt=""
-                          />
-                          <h3>{userName}</h3>
-                        </div>
-
-                        <br />
-                      </span>
-                      {comment}
-                      <hr />
-                    </div>
-                    <div className="col-1">
-                      {user === currentlyLoggedinUser.uid && (
-                        <i
-                          className="fa fa-times"
-                          style={{ cursor: "pointer" }}
-                          onClick={() =>
-                            handleDeleteComment({
-                              commentId,
-                              user,
-                              comment,
-                              userName,
-                              createdAt,
-                            })
-                          }
-                        ></i>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              )
-            )}
+        <button onClick={closeModal} style={{border:'none', marginLeft: '475px', fontSize: '20px', backgroundColor: 'white', padding: '4px'}}>X</button>
           {currentlyLoggedinUser && (
             <>
               <div className="emoji-input-container">
@@ -202,6 +157,57 @@ export default function Comment({
               </div>
             </>
           )}
+          {comments !== null &&
+            comments.map(
+              ({ commentId, user, comment, userName, createdAt }) => (
+                <div key={commentId}>
+                  <div className="border p-2 mt-2 row">
+                    <div className="col-11">
+                      <span
+                        className={`badge ${
+                          user === currentlyLoggedinUser.uid
+                            ? "bg-success"
+                            : "bg-primary"
+                        }`}
+                      >
+                        <div className="header-img-container " >
+                          <img
+                            className="card-header-img"
+                            src={createdUserPhoto}
+                            alt=""
+                            style={{ width: '25px', height: '25px', }}
+                          />
+                          <h3 style={{ marginRight: '390px'}}>{userName}</h3>
+                        </div>
+
+                      </span>
+                      <div style={{ display: 'flex'}}>
+                      <p style={{ marginLeft: '8px', margin: '3px'}}>{comment} </p>
+                      <p style={{ marginTop: '4px', marginLeft: '430px'}}>{user === currentlyLoggedinUser.uid && (
+                        <i
+                          className="fa fa-times"
+                          style={{ cursor: "pointer" }}
+                          onClick={() =>
+                            handleDeleteComment({
+                              commentId,
+                              user,
+                              comment,
+                              userName,
+                              createdAt,
+                            })
+                          }
+                        ></i>
+                      )}</p>
+                      </div>
+                      <hr />
+                    </div>
+                    <div className="col-1">
+                      
+                    </div>
+                  </div>
+                </div>
+              )
+            )}
         </div>
       </div>
       <div className="w-screen"></div>

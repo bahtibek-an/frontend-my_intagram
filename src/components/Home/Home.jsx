@@ -1,100 +1,63 @@
-/** @format */
-
 import React, { useEffect, useState } from "react";
 import "./Home.scss";
+import { Link } from "react-router-dom";
+import { collection, onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";
+import { firestore, auth } from "../../Api/firebase";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import HomeIcon from "@mui/icons-material/Home";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import LogoutIcon from "@mui/icons-material/Logout";
 import CreatePost from "../Post/CreatePost/CreatePost";
 import Likes from "../Likes/Likes";
-import {
-  collection,
-  onSnapshot,
-  orderBy,
-  query,
-  getDoc,
-  deleteDoc,
-} from "firebase/firestore";
-import { firestore } from "../../Api/firebase";
-import { useSelector } from "react-redux";
 import Comment from "../Likes/Comment";
 import SearchedUser from "./SearchedUser";
-import { auth } from "../../Api/firebase";
-import LogoutIcon from "@mui/icons-material/Logout";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Home = ({ user }) => {
   const { postLoading } = useSelector((state) => state.posts);
   const [modalState, setModalState] = useState(false);
   const [commentModal, setCommentModal] = useState(true);
-  const [article, setArticles] = useState(null);
+  const [article, setArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState(null);
   const [users, setUsers] = useState([]);
   const [filteredData, setFilteredData] = useState(users);
 
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const articleRef = collection(firestore, "Articles");
+      const q = query(articleRef, orderBy("createdAt", "desc"));
+      onSnapshot(q, (snapshot) => {
+        const articlesData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setArticles(articlesData);
+      });
+    };
+
+    const fetchUsers = async () => {
+      const userRef = collection(firestore, "Users");
+      const q = query(userRef, orderBy("userPhoto", "asc"));
+      onSnapshot(q, (snapshot) => {
+        const usersData = snapshot.docs
+          .map((doc) => ({ id: doc.id, ...doc.data() }))
+          .filter((userData) => userData.id !== user.uid);
+        setUsers(usersData);
+      });
+    };
+
+    fetchArticles();
+    fetchUsers();
+  }, [user]);
+
   const handleLogOut = () => {
     auth.signOut();
-    alert("SUccsess");
+    alert("Success");
   };
 
-  const filteredUsers = users.filter((el) => el.id !== user.uid);
-
-  useEffect(() => {
-    const articleRef = collection(firestore, "Articles");
-    const q = query(articleRef, orderBy("createdAt", "desc"));
-    onSnapshot(q, (snapshot) => {
-      const articles = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setArticles(articles);
-    });
-  }, []);
-  useEffect(() => {
-    const userRef = collection(firestore, "Users");
-    const q = query(userRef, orderBy("userPhoto", "asc"));
-
-    onSnapshot(q, (snapshot) => {
-      const usersR = snapshot.docs
-        .map((doc) => ({ id: doc.id, ...doc.data() }))
-        .filter((userData) => userData.id !== user.uid);
-
-      setUsers(usersR);
-    });
-  }, [user]);
-  // console.log(typeof searchTerm);
-
-  const emojis = [
-    "😀",
-    "😍",
-    "😎",
-    "🔥",
-    "👍",
-    "❤️",
-    "👏",
-    "🙌",
-    "🎉",
-    "🥳",
-    "🤩",
-    "🤗",
-  ];
-
   const handleDeletePost = async (postId) => {
-    console.log("hello")
-    console.log(postId);
-    try {
-      // Check if the current user is the owner of the post
-      const postRef = collection(firestore, "Articles", postId);
-      const postDoc = await getDoc(postRef);
-      
+    const postRef = doc(firestore, "Articles", postId);
 
-      if (postDoc.exists() && postDoc.data().createdBy === user.displayName) {
-       
-        await deleteDoc(postRef);
-      } else {
-        alert("You are not the owner of this post.");
-      }
+    try {
+      await deleteDoc(postRef);
     } catch (error) {
       console.error("Error deleting post:", error);
     }
@@ -140,7 +103,7 @@ const Home = ({ user }) => {
                     placeholder="Search..."
                     onChange={handleInputChange}
                   />
-                  {searchTerm ? <SearchedUser data={filteredData} /> : null}
+                 {searchTerm ? <SearchedUser data={filteredData} /> : null} 
                 </div>
               </label>
             </div>
@@ -187,12 +150,12 @@ const Home = ({ user }) => {
                     />
                   </div>
                   <div style={{ display: "flex" }}>
-                    <div style={{ display: "block" }}>
-                      <span className="card-title">{el.createdBy}</span>
+                    <div style={{ width: "120px"}} >
+                      <span className="card-title" >{el.createdBy}</span>
                       <br />
                       <span className="card-subtitle">{el.title}</span>
                     </div>
-                    <div style={{ marginLeft: '240px', color: 'red', fontSize: '14px', cursor: 'pointer'}}>
+                    <div style={{ marginLeft: '240px', color: 'red', fontSize: '14px', cursor: 'pointer', marginBottom: "3px"}}>
                       {el.createdBy === user.displayName && (
                         <a
                           className="card-icon card-icon-right"
@@ -213,7 +176,7 @@ const Home = ({ user }) => {
                 </div>
                 <span
                   className=""
-                  style={{ display: "flex", justifyContent: "flex-end" }}
+                  style={{ marginLeft: '320px' }}
                 >
                   {el.createdAt.toDate().toLocaleString()}
                 </span>
