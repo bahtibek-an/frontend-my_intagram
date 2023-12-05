@@ -100,6 +100,6 @@ On the css/colors/design, you can be creative.
 Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
 Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
 
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
+You will write the url in `https://shaxboz-instagram-app.netlify.app/`. Nothing more, just the URL.
 
 Your .gitignore must remove node_modules/
