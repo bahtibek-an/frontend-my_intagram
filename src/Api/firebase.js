@@ -5,13 +5,13 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBCKrVoWtZ84iJPMJmY9JxxepS4ftGbWRA",
-    authDomain: "insta-8f458.firebaseapp.com",
-    databaseURL: "https://insta-8f458-default-rtdb.firebaseio.com",
-    projectId: "insta-8f458",
-    storageBucket: "insta-8f458.appspot.com",
-    messagingSenderId: "966989905820",
-    appId: "1:966989905820:web:065bb86bd0dd7ee6df1259"
+    apiKey: "AIzaSyD0K01p3pRk5SKInxwmzmXecDVuOtT6z8E",
+    authDomain: "instaproject12-bfc15.firebaseapp.com",
+    projectId: "instaproject12-bfc15",
+    storageBucket: "instaproject12-bfc15.appspot.com",
+    messagingSenderId: "779056874247",
+    appId: "1:779056874247:web:21c75b11e8d6d51da6bba2",
+    measurementId: "G-0S8XM70JCV"
 };
 
 
