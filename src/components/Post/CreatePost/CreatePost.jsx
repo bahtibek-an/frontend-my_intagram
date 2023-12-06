@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useState } from "react";
 import "./CreatePost.scss";
 import { Label } from "@mui/icons-material";
@@ -32,9 +30,8 @@ const CreatePost = ({ setModalState, user }) => {
     if (data.title != null) {
       dispatch(publishPosts(data))
         .then(() => {
-          // Post successfully published
           setPostPublished(true);
-          // Automatically close the modal after a short delay (you can adjust the delay as needed)
+        
           setTimeout(() => setModalState(false), 0);
         })
         .catch((error) => {
