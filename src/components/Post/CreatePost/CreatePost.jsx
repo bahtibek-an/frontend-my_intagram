@@ -7,6 +7,7 @@ import { publishPosts } from "../../../redux/extraReducer";
 import { useDispatch, useSelector } from "react-redux";
 const CreatePost = ({ setModalState, user }) => {
   const { postLoading } = useSelector((state) => state.posts);
+  const [postPublished, setPostPublished] = useState(false);
   var dispatch = useDispatch();
   const [data, setData] = useState({
     user: user,
@@ -29,7 +30,17 @@ const CreatePost = ({ setModalState, user }) => {
 
   const publishPost = () => {
     if (data.title != null) {
-      dispatch(publishPosts(data));
+      dispatch(publishPosts(data))
+        .then(() => {
+          // Post successfully published
+          setPostPublished(true);
+          // Automatically close the modal after a short delay (you can adjust the delay as needed)
+          setTimeout(() => setModalState(false), 0);
+        })
+        .catch((error) => {
+          // Handle error if needed
+          console.error("Error publishing post:", error);
+        });
     }
   };
   return (
@@ -39,11 +50,6 @@ const CreatePost = ({ setModalState, user }) => {
       ) : (
         <>
           <div className='modal-container'>
-            {selected ? (
-              <button className='btn ' onClick={publishPost}>
-                Publish
-              </button>
-            ) : null}
             <div>
               {selected ? (
                 <>
@@ -73,14 +79,19 @@ const CreatePost = ({ setModalState, user }) => {
                   </form>
                   <button
                     className='btn'
-                    style={{ background: "red" }}
+                    style={{ background: "red", marginTop: '10px' }}
                     onClick={() => setModalState(false)}>
                     Cancel
                   </button>
+                  {selected ? (
+              <button className='btn ' style={{ marginTop: '10px'}} onClick={publishPost}>
+                Publish
+              </button>
+            ) : null}
                 </>
               ) : (
                 <>
-                  <label htmlFor=''>Select from compyter</label>
+                  <label htmlFor='' style={{ fontSize: '16px'}}>Select Image</label>
                   <input
                     type='file'
                     onChange={handleFileChange}

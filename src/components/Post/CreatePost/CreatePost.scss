@@ -2,7 +2,7 @@
 
 .modal-container {
   position: fixed;
-  bottom: 0;
+  bottom: 30%;
   left: 0;
   right: 0;
   margin: auto;
@@ -18,7 +18,9 @@
   text-align: center;
   .selected__img__container {
     img {
-      width: 100%;
+      margin-top: 10px;
+      width: 280px;
+      height: 300px;
     }
     width: 400px;
   }
