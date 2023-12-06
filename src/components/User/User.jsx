@@ -1,114 +1,207 @@
-/** @format */
-
-import React, { useState } from "react";
-import "./User.scss";
+import React, { useState, useEffect } from "react";
+import { auth, firestore } from "../../Api/firebase";
 import SettingsIcon from "@mui/icons-material/Settings";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import AddBoxIcon from "@mui/icons-material/AddBox";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import HomeIcon from "@mui/icons-material/Home";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { auth } from "../../Api/firebase";
+import CreatePost from "../Post/CreatePost/CreatePost";
+import Likes from "../Likes/Likes";
+import Comment from "../Likes/Comment";
+import { useSelector } from "react-redux";
 import ModalItem from "../Post/ModalItem/ModalItem";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import SearchedUser from "../Home/SearchedUser";
+import "./User.scss";
+import {
+  getDocs,
+  collection,
+  where,
+  query,
+  orderBy,
+  onSnapshot,
+} from "firebase/firestore";
+
 const User = ({ user }) => {
   const [userSetting, setUserSetting] = useState(false);
-  const [userPosts, setUserPosts] = useState([])
-  const handleLogOut = () => {
-    auth.signOut();
-    alert("SUccsess");
+  const [userPosts, setUserPosts] = useState([]);
+  const [commentModal, setCommentModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(null);
+  const [users, setUsers] = useState([]);
+  const [filteredData, setFilteredData] = useState(users);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const userRef = collection(firestore, "Users");
+      const q = query(userRef, orderBy("userPhoto", "asc"));
+      onSnapshot(q, (snapshot) => {
+        const usersData = snapshot.docs
+          .map((doc) => ({ id: doc.id, ...doc.data() }))
+          .filter((userData) => userData.id !== user.uid);
+        setUsers(usersData);
+      });
+    };
+
+    const fetchUserPosts = async () => {
+      try {
+        const q = query(
+          collection(firestore, "Articles"),
+          where("createdBy", "==", user.displayName)
+        );
+        const snapshot = await getDocs(q);
+
+        const userPostsData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        setUserPosts(userPostsData);
+      } catch (error) {
+        console.error("Error fetching user posts:", error);
+      }
+    };
+
+    fetchUsers();
+    fetchUserPosts();
+  }, [user.displayName, user]);
+
+  const handleLogOut = async () => {
+    try {
+      await auth.signOut();
+      alert("Logout successful");
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
   };
+
+  const handleDeletePost = async (postId) => {
+    const postRef = firestore.collection("Articles").doc(postId);
+
+    try {
+      await postRef.delete();
+    } catch (error) {
+      console.error("Error deleting post:", error);
+    }
+  };
+
+  //   console.log(user.uid)
+
+  const handleInputChange = (event) => {
+    const newSearchTerm = event.target.value.toLowerCase();
+    setSearchTerm(newSearchTerm);
+  
+    // Filter the data based on the search term, excluding the current user
+    const filteredResults = users.filter(
+      (item) =>
+        item.userName.toLowerCase().includes(newSearchTerm) &&
+        item.userName !== user.displayName
+    );
+
+    
+    setFilteredData(filteredResults);
+  };
+  
+
   return (
     <>
-      <header className='grid main-header'>
-        <div className='flex-container header-container'>
-          <span className='logo logo-nav header-item'>Instagram</span>
+      <header className="grid main-header">
+        <div className="flex-container header-container">
+          <span className="logo logo-nav header-item">Instagram</span>
 
-          <div className='header-item searchbar '>
-            <label for='searchbar '>
-              <div className='flex-container'>
-                <div className='search-icon-container'>
+          <div className="header-item searchbar">
+            <label htmlFor="searchbar">
+              <div className="flex-container">
+                <div className="search-icon-container">
                   <svg
-                    className='search-nav-icon'
-                    viewBox='0 0 512 512'
-                    width='100'
-                    title='search'>
-                    <path d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z' />
+                    className="search-nav-icon"
+                    viewBox="0 0 512 512"
+                    width="100"
+                    title="search"
+                  >
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
                   </svg>
                 </div>
 
                 <input
-                  id='searchbar'
-                  type='text'
-                  className='searchbar-input'
-                  placeholder='Search...'
+                  id="searchbar"
+                  type="text"
+                  className="searchbar-input"
+                  placeholder="Search..."
+                  onChange={handleInputChange}
                 />
+                {searchTerm ? <SearchedUser data={filteredData} /> : null}
               </div>
             </label>
           </div>
-          <nav className='header-item main-nav'>
-            <ul className='navbar flex-container'>
-              <li className='navbar-item'>
-                <a href='/home'>
+          <nav className="header-item main-nav">
+            <ul className="navbar flex-container">
+              <li className="navbar-item">
+                <a href="/home">
                   <HomeIcon sx={{ fontSize: 30 }} />
                 </a>
               </li>
-              <li className='navbar-item'>
-                <a href='/home'>
+              <li className="navbar-item">
+                <a href="/home">
                   <AddBoxIcon sx={{ fontSize: 30 }} />
                 </a>
               </li>
 
-              <li className='navbar-item no-hover'>
-                <img style={{ marginBottom: "8px"}} src={user?.photoURL} alt='' />
+              <li className="navbar-item no-hover">
+                <a href="/profile">
+                  <img
+                    style={{ marginBottom: "8px" }}
+                    src={user?.photoURL}
+                    alt=""
+                  />
+                </a>
               </li>
-              <li className='navbar-item'>
+              <li className="navbar-item">
                 <LogoutIcon sx={{ fontSize: 30 }} onClick={handleLogOut} />
               </li>
             </ul>
           </nav>
         </div>
       </header>
-      <div className='userprofile'>
+      <div className="userprofile">
         <header>
-          <div className='container'>
-            <div className='profile'>
-              <div className='profile-image'>
-                <img src={user?.photoURL} alt='' />
+          <div className="container">
+            <div className="profile">
+              <div className="profile-image">
+                <img src={user?.photoURL} alt="" />
               </div>
 
-              <div className='profile-user-settings'>
-                <h1 className='profile-user-name'>{user?.displayName}</h1>
+              <div className="profile-user-settings">
+                <h1 className="profile-user-name">{user?.displayName}</h1>
 
                 <button
-                  className=' profile-edit-btn'
-                  onClick={() => setUserSetting(!userSetting)}>
+                  className=" profile-edit-btn"
+                  onClick={() => setUserSetting(!userSetting)}
+                >
                   Edit Profile
                 </button>
 
                 <button
-                  className=' profile-settings-btn'
-                  aria-label='profile settings'>
+                  className=" profile-settings-btn"
+                  aria-label="profile settings"
+                  style={{ cursor: "pointer" }}
+                >
                   <SettingsIcon />
                 </button>
               </div>
 
-              <div className='profile-stats'>
+              <div className="profile-stats">
                 <ul>
                   <li>
-                    <span className='profile-stat-count'>1</span> posts
+                    <span className="profile-stat-count">
+                      {userPosts.length}
+                    </span>{" "}
+                    posts
                   </li>
-                  <li>
-                    <span className='profile-stat-count'>0</span> followers
-                  </li>
-                  <li>
-                    <span className='profile-stat-count'>0</span> following
-                  </li>
+                  {/* Add logic to fetch and display followers and following counts */}
                 </ul>
               </div>
 
-              <div className='profile-bio'>
+              <div className="profile-bio">
                 <p>
-                  <span className='profile-real-name'>{user?.displayName}</span>{" "}
+                  <span className="profile-real-name">{user?.displayName}</span>{" "}
                 </p>
               </div>
             </div>
@@ -116,30 +209,17 @@ const User = ({ user }) => {
         </header>
 
         <main>
-          <div className='container'>
-            <div className='gallery'>
-              {userPosts.map((el) => {
-                <div className='gallery-item' tabindex='0'>
+          <div className="container">
+            <div className="gallery">
+              {userPosts.map((post) => (
+                <div key={post.id} className="gallery-item">
                   <img
-                    src='https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=500&h=500&fit=crop'
-                    className='gallery-image'
-                    alt=''
+                    src={post.imageUrl}
+                    className="gallery-image"
+                    alt={`Post ${post.id}`}
                   />
-
-                  <div className='gallery-item-info'>
-                    <ul>
-                      <li className='gallery-item-likes'>
-                        <span className='visually-hidden'>Likes:</span>
-                        <i className='fas fa-heart' aria-hidden='true'></i> 34
-                      </li>
-                      <li className='gallery-item-comments'>
-                        <span className='visually-hidden'>Comments:</span>
-                        <i className='fas fa-comment' aria-hidden='true'></i> 1
-                      </li>
-                    </ul>
-                  </div>
-                </div>;
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </main>

@@ -64,13 +64,17 @@ const Home = ({ user }) => {
   };
 
   const handleInputChange = (event) => {
-    const newSearchTerm = event.target.value;
+    const newSearchTerm = event.target.value.toLowerCase();
     setSearchTerm(newSearchTerm);
-
-    // Filter the data based on the search term
-    const filteredResults = users.filter((item) =>
-      item.userName.toLowerCase().includes(newSearchTerm.toLowerCase())
+  
+    // Filter the data based on the search term, excluding the current user
+    const filteredResults = users.filter(
+      (item) =>
+        item.userName.toLowerCase().includes(newSearchTerm) &&
+        item.userName !== user.displayName
     );
+
+    
     setFilteredData(filteredResults);
   };
   return (
@@ -248,7 +252,7 @@ const Home = ({ user }) => {
                 <span className="sidebar-btn-alt">See all</span>
               </div>
               {users
-                .filter((el) => el.id !== user.uid)
+                .filter((el) => el.userName !== user.displayName)
                 .map((el) => (
                   <div className="sidebar-card sidebar-card-alt grid" key={el.id}>
                     <img

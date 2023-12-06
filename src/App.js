@@ -15,14 +15,16 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={!user ? <Login /> : <Home user={user} />} />
+        <Route path="/" element={!user ? <Login /> : <Home user={user} />} />
         <Route
-          path='/sign-in'
-          element={user ? <a href="/home">Back to Home Page</a> : <Register />}
+          path="/sign-in"
+          element={
+            user ? <a href="/home">Back to Home Page</a> : <Register />
+          }
         />
-        <Route path='/home' element={user ? <Home user={user} /> : null} />
+        <Route path="/home" element={user ? <Home user={user} /> : null} />
         <Route
-          path='/profile'
+          path="/profile"
           element={
             user ? (
               <User user={user} />
@@ -32,7 +34,7 @@ function App() {
           }
         />
         <Route
-          path='/:username'
+          path="/:username"
           element={user ? <UserProfile user={user} /> : null}
         />
       </Routes>
