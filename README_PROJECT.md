@@ -22,7 +22,7 @@
 ░░░╚═╝░░░╚═╝░░╚══════╝╚═════╝░╚═════╝░╚═╝░░░╚═╝░░░╚══════╝
 
 # Task
-I learned react and typescript.It took me a long time to make an instagram clone I'm having trouble uploading an image The solution to my problem was firebase.
+I       learned react and typescript.It took me a long time to make an instagram clone I'm having trouble uploading an image The solution to my problem was firebase.
 
 # Description
 In Instagram clone: Login and Signup Change you password. Change account type private or public Indicates that users exists as you type username when signing up Follow, Unfollow, Recommend and Profile views Like, Comment, Remove tag, Copy post link, Delete post, Edit post, Open post.Search users. Edit your profile From username, Fullname or Bio, social links to tags.
