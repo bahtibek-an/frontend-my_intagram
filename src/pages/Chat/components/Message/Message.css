@@ -1,0 +1,41 @@
+.message-wrap {
+   @apply flex items-center gap-x-3 flex-1 relative;
+}
+
+.message-wrap:hover .action {
+   opacity: 1;
+   visibility: visible;
+}
+
+.action {
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s;
+}
+
+.action:hover svg {
+   fill: #262626;
+   color: #262626 !important;
+}
+
+.message-wrap.isRight {
+   @apply flex-row-reverse;
+}
+
+.message-wrap .message-content {
+   @apply min-h-[44px] px-4 py-3 border-solid border border-gray-200 rounded-3xl break-all whitespace-pre-line max-w-xs;
+}
+
+.message-wrap.isRight .message-content {
+   @apply bg-gray-100;
+}
+
+.tooltip-wrap .tooltip,
+.reaction-wrap .reaction {
+   @apply flex items-center bg-text-color-black text-white rounded-lg absolute left-0 bottom-[calc(100%_+_10px)];
+}
+
+.message-wrap.isRight .reaction-wrap .reaction,
+.message-wrap.isRight .tooltip-wrap .tooltip {
+   @apply right-0 left-[unset];
+}
