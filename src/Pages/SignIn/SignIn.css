@@ -1,0 +1,168 @@
+*:focus {
+  outline: none;
+}
+
+button:hover ,a:hover {
+  cursor: pointer;
+}
+
+.sign-in {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-image: url("https://img.freepik.com/premium-photo/abstract-background-with-neon-brick-wall-generative-ai_666746-2389.jpg?w=740");
+background-size: cover;
+}
+
+.container-in {
+  width: 60%;
+  height: 80%;
+  border-radius: 30px;
+  color: aliceblue;
+  display: flex;
+  backdrop-filter: blur(20px);
+}
+
+.container-in .image-in {
+  width: 50%;
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.img-in {
+  width: 90%;
+  border-radius: 18px;
+  height: 100%;
+}
+
+.form-div-in {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 30px 30px 0;
+}
+
+.form-div-in .form-in {
+  text-align: center;
+  display: grid;
+  width: 70%;
+  height: 70%;
+}
+
+.form-in .form{
+  text-align: center;
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.form-in .form-element{
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.sign-in-input {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid white;
+  width: 100%;
+  height: 30px;
+  background: none;
+}
+
+.sign-in-input .input-in {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: white;
+}
+
+.sign-in-input .input-in::placeholder {
+  color: white;
+}
+
+
+.sign-in-button {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 900;
+}
+
+.sign-in-reset{
+  color: rgb(0, 98, 255);
+  font-weight: 900;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.sign-in-sign-up-text{
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.sign-in-sign-up-link{
+  color: rgb(0, 98, 255);
+  font-weight: 900;
+  text-shadow: 0 0 10px black;
+}
+
+.error-text-in{
+  color: rgb(255, 0, 17);
+  font-weight: 900;
+  font-size: 22px;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.sign-in-google{
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background: rgb(255,0,0);
+  font-weight: 900;
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(213,219,0,1) 33%, rgba(77,210,0,1) 66%, rgba(0,25,255,1) 100%);
+}
+
+.sign-in-facebook{
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background: #0084ff;
+  font-weight: 900;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  
+  .container-in {
+    width: 90%;
+    height: 80%;
+    justify-content: center;
+  }
+  
+  .container-in .image-in {
+    display: none;
+  }
+  
+  .form-div-in {
+    width: 100%;
+  }
+  
+  .form-div-in .form-in {
+    width: 80%;
+  }
+}

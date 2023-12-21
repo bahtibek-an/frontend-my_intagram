@@ -1,0 +1,73 @@
+.users-div-home{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    padding: 10px;
+}
+
+.user-profile-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-profile-home .profile-page-link{
+    font-size: 16px;
+    color: blue;
+}
+
+.user-profile-home .profile-img{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ff0000;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.users-div-home .for-you-text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.users-profile-div-home{
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.users-profile-div-home .users-profile-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.users-profile-div-home .users-profile-home .profile-img{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ff0000;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.users-profile-div-home .users-profile-home a{
+    color: #fff;
+
+}
+
+.users-profile-div-home .users-profile-home a{
+    color: #fff;
+
+}
+
+.users-profile-div-home .users-profile-home button{
+    font-size: 16px;
+    color: blue;
+    background: none;
+    display: block;
+    border: none;
+}
