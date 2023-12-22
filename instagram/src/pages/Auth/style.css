@@ -1,0 +1,18 @@
+.html{
+    background-color: black;
+}
+.instagram-font {
+    font-family: Cookie, cursive;
+}
+
+.bg-blue-inst {
+    background: black;
+}
+
+.text-blue-inst {
+    color: #005c98;
+}
+.instagram__screenshot{
+    width: 400px;
+    margin-top: 40px;
+}
