@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./w3.css";
-import "./style.css"
-import "./bootstrap-5.css"
 import { AuthContextProvider } from "./context/AuthContext";
 import { PostContextProvider } from "./context/PostContext";
 

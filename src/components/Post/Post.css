@@ -1,0 +1,368 @@
+.post {
+    width: 350px;
+    display: grid;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 0;
+    border: 1px solid rgb(38, 38, 38);
+    border-radius: 10px;
+}
+
+.post .post-img {
+    width: 100%;
+    height: 100%;
+}
+
+.post-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+
+.post-user {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+}
+
+.post-user-img {
+    width: 37px;
+    height: 37px;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+.dropbtn-post {
+    background: none;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: none;
+}
+
+.dropdown-post {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-post {
+    display: none;
+    position: absolute;
+    background-color: rgb(30, 30, 30);
+    width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -50%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.dropdown-content-post a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.dropdown-content-post .post-remove-btn-post,
+.dropdown-content-post .follow-btn-post {
+    color: red;
+}
+
+.dropdown-content-post a:hover {
+    background-color: rgb(38, 38, 38);
+}
+
+.dropdown-post:hover .dropdown-content-post {
+    display: block;
+}
+
+.post-result {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.post-react {
+    background: #000;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 5px;
+    font-size: 17px;
+    align-items: start;
+}
+
+.post-like {
+    width: 8%;
+    display: grid;
+    justify-content: center;
+}
+
+.like-emoji {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.like-count {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.post-comment {
+    width: 8%;
+    display: grid;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.like-true {
+    color: red;
+}
+
+.comment-true {
+    color: green;
+}
+
+.send-true {
+    color: blue;
+}
+
+.post-result .post-send {
+    cursor: pointer;
+    width: 8%;
+    display: grid;
+    justify-content: center;
+}
+
+.comment-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    background-color: rgba(100, 100, 100, 0.2);
+}
+
+.comment-modal-content {
+    background-color: #202124;
+    overflow: scroll;
+    margin: auto;
+    padding: 20px;
+    border: none;
+    width: 400px;
+    height: 400px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.commnet-modal-close {
+    color: #5e5e5e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.commnet-modal-close:hover,
+.commnet-modal-close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.comment-modal-body {
+    padding: 10px;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.comment-text {
+    margin-top: 10px;
+    display: flex;
+}
+
+.comment-text i {
+    margin-right: 7px;
+}
+
+.comment-text small i {
+    display: flex;
+    margin-left: 7px;
+}
+
+.comment-text .comment-user-text {
+    text-decoration: underline;
+}
+
+.comment-modal-body .no-comment {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.post-user-text {
+    display: flex;
+    font-size: 15px;
+    font-weight: 900;
+
+}
+
+.post-user-text p {
+    text-decoration: underline;
+    margin-left: 7px;
+    font-weight: 100;
+}
+
+.comment-input-post {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.comment-input-post .comment-input {
+    width: 80%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(38, 38, 38);
+    color: white;
+}
+
+.comment-input-post .smile-btn {
+    color: rgb(88, 88, 88);
+    text-align: center;
+}
+
+.comment-input-post .comment-submit-btn {
+    font-size: 15px;
+    color: blue;
+    text-align: center;
+}
+
+.post-format-date {
+    display: flex;
+    color: rgb(88, 88, 88);
+    justify-content: end;
+    margin: 10px;
+}
+
+.emoji-list {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: rgb(38, 38, 38);
+    border-radius: 5px;
+    font-size: 17px;
+    height: 35px;
+    border: none;
+}
+
+.emoji-list .emoji:hover {
+    transition: 1s;
+    border-radius: 50%;
+    z-index: 100;
+    font-size: 30px;
+    margin-top: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .post {
+        width: 270px;
+    }
+
+    .post-send i,
+    .post-comment i,
+    .like-emoji i {
+        font-size: 20px;
+    }
+
+    .like-emoji {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .comment-text {
+        display: flex;
+        align-items: center;
+    }
+
+    .comment-modal-body {
+        padding: 0px;
+    }
+
+    .comment-text small i {
+        font-size: 15px;
+        display: flex;
+        margin-left: 7px;
+    }
+
+    .comment-text,
+    .comment-text i {
+        font-size: 20px;
+    }
+
+    .comment-modal-content {
+        height: 600px;
+    }
+}
+
+@media only screen and (min-width: 1030px) {
+    .post {
+        width: 450px;
+    }
+
+    .dropdown-content-post{
+        margin-left: -60px;
+    }
+}

@@ -1,45 +1,41 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
-import Home from "./Pages/Home";
-import Login from "./Pages/Login/Login";
-import Register from "./Pages/Register/Register";
-import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
-import Profile from "./Pages/Profile";
-import AllPost from "./Pages/AllPost";
-import EditProfile from "./Pages/EditProfile";
-import UserProfile from "./Pages/UserProfile";
+import Home from "./Pages/Home/Home";
+import SignUp from "./Pages/SignUp/SignUp";
+import SignIn from "./Pages/SignIn/SignIn";
+import ResetPassword from "./Pages/ResetPassword/ResetPassword";
+import Profile from "./Pages/Profile/Profile";
+import EditProfile from "./Pages/EditProfile/EditProfile";
+import UserProfile from "./Pages/UserProfile/UserProfile";
+import Explore from "./Pages/Explore/Explore";
 
-class App extends Component {
-  static contextType = AuthContext;
+const App = () => {
+  const { currentUser } = useContext(AuthContext);
 
-  render() {
-    const { currentUser } = this.context;
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/sign-in" />;
+    }
+    return children;
+  };
 
-    const ProtectedRoute = ({ children }) => {
-      if (!currentUser) {
-        return <Navigate to="/login" />;
-      }
-      return children;
-    };
-
-    return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<ProtectedRoute><Home /></ProtectedRoute>} />
-            <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-            <Route path="/explore" element={<ProtectedRoute><AllPost /></ProtectedRoute>} />
-            <Route path="/edit" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="profile/:uid" element={<UserProfile />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    );
-  }
-}
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-reset" element={<ResetPassword />} />
+          <Route path="/profile/:uid" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+          <Route index element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+          <Route path="/edit" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
+          <Route path="/explore" element={<ProtectedRoute><Explore /></ProtectedRoute>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;

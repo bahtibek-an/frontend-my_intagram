@@ -1,0 +1,57 @@
+*:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button:hover,
+a:hover {
+    cursor: pointer;
+}
+
+.home {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sidebar-home {
+    border-right: 1px solid rgb(38, 38, 38);
+    width: 25%;
+}
+
+.posts-home {
+    width: 50%;
+    color: white;
+    overflow-y: scroll;
+    display: flex;
+    justify-items: center;
+}
+
+.users-home {
+    width: 25%;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar-home {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .posts-home {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .users-home {
+        display: none;
+
+    }
+}
