@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Variable */
+:root {
+    --color: #fff;
+    --background: #000;
+    --border: rgba(11, 3, 3, 0.18);
+    --background: rgba(255, 255, 255, 0.3);
+    --backdrop-filter-blur: blur(5.5px); 
+    --instagram-background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+/* Custom ScrollBar */
+::-webkit-scrollbar {
+    width: 13px;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045);
+    border-radius: 15px;
+}
+
+::selection{
+  background: #833ab4;
+  color: var(--color);
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+/* circle style */
+main .bg-circles {
+    top: 0;
+    height: 100%;
+    min-width: 1200px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .bg-circles div {
+    position: absolute;
+    border-radius: 50%;
+}
+
+main .bg-circles .circle-1 {
+    height: 260px;
+    width: 260px;
+    background: var(--instagram-background);
+    background-size: 400% 400%;
+    left: 58%;
+    top: 2%;
+    opacity: 0.5;
+    animation: animate-background 5s infinite ease-in-out;
+}
+
+main .bg-circles .circle-2 {
+    height: 360px;
+    width: 360px;
+    background: var(--instagram-background);
+    background-size: 400% 400%;
+    left: 22%;
+    top: 22%;
+    opacity: 0.4;
+    animation: animate-background 8s infinite ease-in-out;
+}
+
+main .bg-circles .circle-3 {
+    height: 550px;
+    width: 550px;
+    background: var(--instagram-background);
+    background-size: 400% 400%;
+    top: 56%;
+    left: 50%;
+    opacity: 0.7;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+/* circle main style */
+main .bg-main-circles {
+    top: 0;
+    height: 100%;
+    min-width: 1200px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .bg-main-circles div {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--instagram-background);
+    background-size: 400% 400%;
+}
+
+main .bg-main-circles .circle-1 {
+    height: 160px;
+    width: 160px;
+    left: 88%;
+    top: 2%;
+    opacity: 0.5;
+    animation: animate-background 5s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-2 {
+    height: 260px;
+    width: 260px;
+    left: 22%;
+    top: 10%;
+    opacity: 0.5;
+    animation: animate-background 8s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-3 {
+    height: 350px;
+    width: 350px;
+    top: 76%;
+    left: 70%;
+    opacity: 0.5;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-4 {
+    height: 90px;
+    width: 90px;
+    top: 3%;
+    left: 1%;
+    opacity: 0.5;
+    animation: animate-background 6s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-5 {
+    height: 140px;
+    width: 140px;
+    top: 90%;
+    left: -4%;
+    opacity: 0.5;
+    animation: animate-background 3s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-6 {
+    height: 250px;
+    width: 250px;
+    top: 55%;
+    left: 6%;
+    opacity: 0.5;
+    animation: animate-background 7s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-7 {
+    height: 170px;
+    width: 170px;
+    top: 66%;
+    left: 40%;
+    opacity: 0.5;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-8 {
+    height: 190px;
+    width: 190px;
+    top: 7%;
+    left: 60%;
+    opacity: 0.5;
+    animation: animate-background 12s infinite ease-in-out;
+}
+
+main .bg-main-circles .circle-9 {
+    height: 210px;
+    width: 210px;
+    top: 35%;
+    left: 76%;
+    opacity: 0.5;
+    animation: animate-background 18s infinite ease-in-out;
+}
+
+/* register style */
+main .register {
+    left: 50%;
+    width: 480px;
+    top: 50%;
+    min-height: 600px;
+    border-radius: 40px;
+    border: 1px solid var(--border);
+    transform: translate(-50%, -50%);
+    background-color: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+main .register1 {
+    min-height: 480px;
+}
+
+main .register2 {
+    min-height: 350px;
+}
+
+main .register3 {
+    min-height: 350px;
+}
+
+@media all and (max-width: 768px) {
+    main .register {
+        margin-top: 100%;
+    }
+}
+
+/* Navbar style */
+main .result_box {
+    flex: 1;
+    width: 100%;
+    margin: 40px 30px 30px 20px;
+}
+
+main .container-fluids {
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+
+main .navbar-box .sidebar {
+    height: 100vh;
+    padding: 15px;
+    background: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+    border: 1px solid var(--border);
+}
+
+main .navbar-box .sidebar .menu-icon {
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+main .navbar-box .nav-list .list p {
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: start;
+    padding: 0 15px 0;
+}
+
+main .navbar-box .nav-list .fixed-bottom p {
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: start;
+    padding: 0 15px 0;
+}
+
+.profile .search-profiles img {
+    width: 100px;
+    height: 100px;
+}
+
+/* home style */
+.home .posts {
+    width: 700px;
+}
+
+.home .posts .card {
+    background: var(--background);
+    border: var(--border);
+    backdrop-filter: var(--backdrop-filter-blur);
+    border-radius: 40px;
+}
+
+.home .posts .card img {
+    border-radius: 30px;
+}
+
+.home .profiles {
+    width: 500px;
+    height: 100%;
+    border-radius: 40px;
+    border: var(--border);
+    background: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+main .container {
+    border: var(--border);
+    border-radius: 40px;
+    background: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.home .profiles .suggested-profile img {
+    width: 90px;
+    height: 90px;
+}
+
+.home .profiles .user-profile img {
+    width: 90px;
+    height: 90px;
+}
+
+.home-comment .modal-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+@media all and (max-width: 768px) {
+    .home .profiles {
+        display: none;
+    }
+
+    .home .posts {
+        width: 100%;
+    }
+}
+
+/* keyframes style */
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}

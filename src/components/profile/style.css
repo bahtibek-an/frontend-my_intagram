@@ -1,0 +1,26 @@
+/* Variable */
+:root {
+    --border: rgba(255, 255, 255, 0.18);
+    --background: rgba(255, 255, 255, 0.3);
+    --backdrop-filter-blur: blur(5.5px); 
+}
+
+.row .card {
+    width: 370px;
+    height: 290px;
+    border: var(--border);
+    border-radius: 30px;
+    background: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.row .col:hover {
+    transform: translateY(-8px);
+}
+
+.row .card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 30px;
+}
+

@@ -1,0 +1,58 @@
+/* Variable */
+:root {
+    --border: rgba(255, 255, 255, 0.18);
+    --background: rgba(255, 255, 255, 0.3);
+    --backdrop-filter-blur: blur(5.5px); 
+    --instagram-background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+.home .posts {
+    width: 700px;
+}
+
+.home .posts .card {
+    background: var(--background);
+    border: var(--border);
+    backdrop-filter: var(--backdrop-filter-blur);
+    border-radius: 40px;
+}
+
+.home .posts .card img {
+    border-radius: 30px;
+}
+
+.home .profiles {
+    width: 500px;
+    height: 100%;
+    border-radius: 40px;
+    border: var(--border);
+    background: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+main .container {
+    border: var(--border);
+    border-radius: 40px;
+    background: var(--background);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.home .profiles .suggested-profile img {
+    width: 90px;
+    height: 90px;
+}
+
+.home .profiles .user-profile img {
+    width: 90px;
+    height: 90px;
+}
+
+@media all and (max-width: 768px) {
+    .home .profiles {
+        display: none;
+    }
+
+    .home .posts {
+        width: 100%;
+    }
+}

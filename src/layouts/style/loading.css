@@ -1,0 +1,54 @@
+.loading-container {
+    height: 250px;
+    width: 250px;
+    border-radius: 60px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-size: 400% 400%;
+    box-shadow: #fd1d1d 0px 0px 34px;
+    animation: animate-background 8s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.loading-box {
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    border: 15px solid white;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.loading-box1 {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 15px solid white;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.loading-row {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    top: 10%;
+    left: 73%;
+}
