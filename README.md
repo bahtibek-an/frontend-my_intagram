@@ -49,13 +49,14 @@ Testing and Deployment:
 
 Test the application thoroughly to ensure functionality.
 Deploy the Instagram Clone, making it accessible to users.
-
+the link of the project = https://my-instagram-three.vercel.app/
 
 # Usage
 Create new User account
 Create Post 
 Comment to post 
 Follow to Friends
+
 # Instalation
 
 git clone project
