@@ -1,0 +1,75 @@
+.sign_up {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+}
+
+.sign_up_card {
+    border: 1px solid rgb(136, 135, 135);
+}
+
+.logo_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_div img {
+    width: 14rem;
+}
+
+h1 {
+    color: gray;
+    font-weight: bold;
+}
+
+form .form_div {
+    margin: 0.5rem 0;
+}
+
+form .form_div input {
+   padding: 0.5rem 0.75rem;
+   font-size: 0.8rem;
+   border: 1px solid rgb(191, 189, 189);
+   outline: none;
+   width: 50%;
+}
+
+form .form_div input:focus {
+    border: 1px solid rgb(120, 120, 120);
+}
+
+button {
+    background-color: rgb(147 197 253);
+    font-size: 0.9rem;
+    margin: 0.75rem 0;
+    width: 66.666667%;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.25rem 0.50rem;
+    border-radius: 0.5rem;
+}
+
+button h1 {
+    color: #fff;
+}
+
+button:hover {
+  background-color: rgb(96 165 250)
+}
+
+.login_div {
+    border: 1px solid rgb(144, 144, 144);
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.login_div h1 span{
+  font-weight: bold;
+   color: rgb(59 130 246)
+}

@@ -1,0 +1,90 @@
+.home {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.home .container {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .container .box .img-box {
+  width: 100%;
+}
+.home .container .box .img-box .img {
+  width: 384px;
+}
+.home .container .box .card {
+  width: 100%;
+  text-align: center;
+}
+.home .container .box .card .card-box {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.home .container .box .card .card-box .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.home .container .box .card .card-box .logo .logo-img {
+  text-align: center;
+  height: 128px;
+  width: 192px;
+}
+.home .container .box .card .card-box .form .form-card .form-box {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.home .container .box .card .card-box .form .form-card .form-box .form-input {
+  margin-top: 8px;
+  /* margin-bottom: 8px; */
+  padding: 12px 12px;
+  /* width: 67%; */
+  height: 32px;
+  font-size: 20px;
+  width: 100%;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 15px;
+
+}
+.home .container .box .card .card-box .form .form-card .form-box .form-input:focus {
+  border: 1px solid rgb(165, 165, 165);
+}
+.home .container .box .card .card-box .form .btn {
+  background-color: rgb(78, 78, 247);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  width: 100%;
+  height: 30px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+.home .container .box .card .card-box .form .btn:hover {
+  background-color: rgb(33, 33, 252);
+}
+.home .container .box .card .card-box .forget {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.home .container .box .card .card-box .forget a h1 {
+  color: rgb(44, 44, 250);
+}
+.home .container .box .card .signup-box {
+  border: 1px solid rgb(177, 172, 172);
+  margin-top: 24px;
+  padding: 16px 24px;
+}
+.home .container .box .card h1 a span {
+  color: rgb(72, 72, 245);
+  font-weight: bold;
+}/*# sourceMappingURL=Home.css.map */
