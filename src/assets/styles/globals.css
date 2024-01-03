@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Instagram Sans Condensed";
+  src: url("/fonts/insta-sans/InstagramSansCondensed-Bold.eot");
+  src:
+    local("Instagram Sans Condensed Bold"),
+    local("InstagramSansCondensed-Bold"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Bold.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Bold.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans Script";
+  src: url("/fonts/insta-sans/InstagramSansScript-Regular.eot");
+  src:
+    local("Instagram Sans Script Regular"),
+    local("InstagramSansScript-Regular"),
+    url("/fonts/insta-sans/InstagramSansScript-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSansScript-Regular.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSansScript-Regular.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSansScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans Headline";
+  src: url("/fonts/insta-sans/InstagramSansHeadline-Regular.eot");
+  src:
+    local("Instagram Sans Headline Regular"),
+    local("InstagramSansHeadline-Regular"),
+    url("/fonts/insta-sans/InstagramSansHeadline-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSansHeadline-Regular.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSansHeadline-Regular.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSansHeadline-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans Condensed";
+  src: url("/fonts/insta-sans/InstagramSansCondensed-Regular.eot");
+  src:
+    local("Instagram Sans Condensed Regular"),
+    local("InstagramSansCondensed-Regular"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Regular.woff2")
+      format("woff2"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Regular.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSansCondensed-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans";
+  src: url("/fonts/insta-sans/InstagramSans-Medium.eot");
+  src:
+    local("Instagram Sans Medium"),
+    local("InstagramSans-Medium"),
+    url("/fonts/insta-sans/InstagramSans-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSans-Medium.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSans-Medium.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans Script";
+  src: url("/fonts/insta-sans/InstagramSansScript-Bold.eot");
+  src:
+    local("Instagram Sans Script Bold"),
+    local("InstagramSansScript-Bold"),
+    url("/fonts/insta-sans/InstagramSansScript-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSansScript-Bold.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSansScript-Bold.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSansScript-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans";
+  src: url("/fonts/insta-sans/InstagramSans-Bold.eot");
+  src:
+    local("Instagram Sans Bold"),
+    local("InstagramSans-Bold"),
+    url("/fonts/insta-sans/InstagramSans-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSans-Bold.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSans-Bold.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans";
+  src: url("/fonts/insta-sans/InstagramSans-Light.eot");
+  src:
+    local("Instagram Sans Light"),
+    local("InstagramSans-Light"),
+    url("/fonts/insta-sans/InstagramSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSans-Light.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSans-Light.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instagram Sans";
+  src: url("/fonts/insta-sans/InstagramSans-Regular.eot");
+  src:
+    local("Instagram Sans Regular"),
+    local("InstagramSans-Regular"),
+    url("/fonts/insta-sans/InstagramSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/insta-sans/InstagramSans-Regular.woff2") format("woff2"),
+    url("/fonts/insta-sans/InstagramSans-Regular.woff") format("woff"),
+    url("/fonts/insta-sans/InstagramSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+input {
+  background-color: transparent;
+}
