@@ -1,0 +1,314 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #fafafa;
+  // tjos osa
+}
+// tjos osa
+
+// tjos osa
+.this-is-main-1{
+  // tjos osa
+  display: flex;
+  // tjos osa
+  flex-direction: column;
+  // tjos osa
+  align-items: center;
+  // tjos osa
+
+  // tjos osa
+
+  // tjos osa
+.thasts-poge{
+  // tjos osa
+  display: flex;
+  // tjos osa
+  flex-direction: column;
+  // tjos osa
+  align-items: center;
+  // tjos osa
+  padding-bottom: 30px;
+  // tjos osa
+}
+// tjos osa
+
+// tjos osa
+/* hoder style */
+// tjos osa
+.thasts-poge .hoder{
+  // tjos osa
+  text-align: center;
+  // tjos osa
+}
+// tjos osa
+
+// tjos osa
+.thasts-poge .hoder .logu, 
+// tjos osa
+.thasts-poge .hoder p, 
+// tjos osa
+.thasts-poge .hoder button{
+  // tjos osa
+  margin-bottom: 15px;
+  // tjos osa
+}
+// tjos osa
+
+// tjos osa
+.thasts-poge .hoder > p{
+  // tjos osa
+  font-weight: bold;
+  // tjos osa
+  color: #8e8e8e;
+  // tjos osa
+  font-size: 18px;
+  // tjos osa
+}
+// tjos osa
+
+// tjos osa
+.thasts-poge .hoder > button{
+  // tjos osa
+  width: inherit;
+  // tjos osa
+  padding: 10px 20px;
+  // tjos osa
+  border-radius: 5px;
+  // tjos osa
+  border: none;
+  // tjos osa
+  background-color: #0095f6;
+  // tjos osa
+  color: #ffffff;
+  // tjos osa
+}
+
+.thasts-poge .hoder div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #8e8e8e;
+}
+
+.thasts-poge .hoder div p{
+  padding: 0 20px;  
+}
+
+.thasts-poge .hoder div hr{
+  width: 200px;
+  
+}
+
+/* container style*/
+.thasts-poge .container{
+  display: flex;
+  flex-direction: column;
+}
+
+.thasts-poge .container form, input{
+  width: inherit;
+}
+
+.thasts-poge .container form input{
+  border: 1px solid #dbdbdb;
+  background-color: #fafafa;
+  padding: 10px 5px;
+  margin: 5px 0;
+}
+
+.thasts-poge .container form input:last-of-type{
+  margin-bottom: 10px;  
+}
+
+.thasts-poge .container form button{
+  width: inherit;
+  margin-bottom: 20px;
+  padding: 7px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0095f6;
+  color: #ffffff;
+}
+
+.thasts-poge .container ul{
+  list-style: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.thasts-poge .container ul li{
+  display: inline;
+  color: #8e9096;
+}
+
+.thasts-poge .container ul li a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #8e9096;
+}
+
+/* option style */
+.option p > a{
+    text-decoration: none;
+    color: #00a0f7;
+}
+
+/* otherapps style */
+.otherapps{
+  text-align: center;
+}
+
+.otherapps p{
+  margin-bottom: 15px;
+}
+
+.otherapps > button{
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* footer style */
+.footer{
+  bottom: 0;
+  height: 2.5rem;
+  margin-top: 50px;
+}
+
+.footer ul{
+  text-align: center;
+}
+.footer ul li{
+  display: inline;
+  margin-right: 5px;
+}
+.footer ul li a{
+  text-decoration: none;
+  font-size: 12px; 
+  color: #00376b;
+}
+
+.footer p{
+  margin: 10px 0;
+  text-align: center;
+  color: #8e9096;
+  font-size: 14px;
+}
+
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-family: Freight Sans
+    }
+  
+  .thasts-poge{
+    width: 250px;
+    background-color: #fafafa;
+  }
+  
+  .thasts-poge .hoder{
+    width: inherit;
+    margin-top: 10px;
+  }
+  
+  .thasts-poge .container{
+    width: inherit;
+  }
+  
+  .option{
+    margin: 80px 0;
+  }
+  
+  .thasts-poge .container input{
+    padding: 10px 5px;
+    margin: 5px 0;
+  }
+  
+  .thasts-poge .footer{
+    width: inherith
+  }
+}
+
+@media only screen and (min-width: 401px){
+    body {
+        font-family: Neue Helvetica
+    }
+  .thasts-poge{
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    background-color: white;
+    margin: 40px 40px 10px 40px;
+  }
+  
+  .thasts-poge .hoder{
+    width: 270px;
+    margin-top: 15px;
+  }
+  
+  .thasts-poge .container{
+    width: 270px;
+  }
+  
+  .option{
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    width: 350px;
+    height: 70px;
+    margin-top: 20px 0;
+    display: flex; 
+    // this is comment to
+    align-items: center;
+    // this is comment to
+    justify-content: center;
+    // this is comment to
+    
+    // this is comment to
+  }
+  // this is comment to
+  
+  // this is comment to
+  .otherapps{
+    // this is comment to
+    margin: 20px 0;
+    // this is comment to
+  }
+  // this is comment to
+  
+  // this is comment to
+  .otherapps button{
+    // this is comment to
+    margin-right: 5px;
+    // this is comment to
+  }
+  // this is comment to
+  
+  // this is comment to
+  .otherapps button:after-of-type{
+    // this is comment to
+    margin-right: none;
+    // this is comment to
+  }
+  // this is comment to
+  
+  // this is comment to
+  .thasts-poge .footer{
+    // this is comment to
+    width: 100%;
+    // this is comment to
+  }
+  // this is comment to
+}
+// this is comment to
+}
+// this is comment to
