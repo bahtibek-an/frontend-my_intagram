@@ -1,0 +1,67 @@
+/** @format */
+.close{
+  position: relative;
+  svg{
+    position: absolute;
+    top:20px;
+    left: 3px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+}
+.user_setting {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
+  height: 300px;
+  max-width: 600px;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  //   align-items: center;
+  text-align: end;
+  // justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  .close-btn {
+    font-size: 30px;
+    text-align: end;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  .update-user-container {
+    margin: auto;
+    width: 70%;
+    input {
+      width: 100%;
+      margin-top: 12px !important;
+    }
+    button {
+      margin-top: 5px !important;
+    }
+    .user__profile__container{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .user__upload__container{
+      position: relative;
+      label{
+        font-size: 40px;
+        position: absolute;
+        top: -42px;
+        left: 55px;
+        cursor: pointer;
+      }
+    }
+  }
+}
