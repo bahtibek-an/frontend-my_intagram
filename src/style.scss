@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+section {
+  font-family: "Gruppo", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  filter: brightness(90%);
+  background: url("https://top-fon.com/uploads/posts/2021-07/1626987547_58-p-rozovii-fon-dlya-instagramma-nezhnii-60.jpg");
+  // background: url("https://top-fon.com/uploads/posts/2023-01/1674761138_top-fon-com-p-fon-dlya-prezentatsii-instagram-1.jpg");
+  background-position: center;
+  background-size: cover ;
+  // background-repeat: no-repeat;
+}
+
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(8px);
+}
+
+.blur {
+  backdrop-filter: blur(15px);
+}
+
+.form-box {
+  font-family: "Gruppo", sans-serif;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: black;
+  background: transparent;
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  //chetki qismi 
+  border: 3px solid rgba(300, 0, 200, 0.5);
+  border-radius: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Gruppo", sans-serif;
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+
+.inputbox {
+  // align-items: left;
+  font-family: "Gruppo", sans-serif;
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid black;
+}
+
+.inputbox label {
+  font-family: "Gruppo", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  font-family: "Gruppo", sans-serif;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: black;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: black;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forget {
+  font-family: "Gruppo", sans-serif;
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.forget label input {
+  font-family: "Gruppo", sans-serif;
+  margin-right: 3px;
+}
+
+.forget label a {
+  font-family: "Gruppo", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.forget label a:hover {
+  font-family: "Gruppo", sans-serif;
+  text-decoration: underline;
+}
+
+button {
+  font-family: "Gruppo", sans-serif;
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: tan;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.register {
+  font-family: "Gruppo", sans-serif;
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  font-family: "Gruppo", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  font-family: "Gruppo", sans-serif;
+  text-decoration: underline;
+}
+
+* {
+  font-family: "Gruppo", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: 500px;
+}
+
+@media screen and (max-width: 450px) {
+  .mobile-none {
+    display: none;
+  }
+
+  .post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
