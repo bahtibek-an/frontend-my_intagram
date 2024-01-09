@@ -5,7 +5,7 @@ import useUserProfileStore from "../../store/userProfileStore";
 
 const Caption = ({ post }) => {
   const userProfile = useUserProfileStore((state) => state.userProfile);
-
+  // const emoji = ["😘", "😙"];
   return (
     <Flex gap={4}>
       <Link to={`/${userProfile.username}`}>

@@ -22,6 +22,8 @@ const config = {
   useSystemColorMode: false,
 };
 
+
+
 // 3. extend the theme
 const theme = extendTheme({ config, styles });
 

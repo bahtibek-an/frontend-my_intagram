@@ -6,6 +6,7 @@ import { firestore } from "../firebase/firebase";
 import usePostStore from "../store/postStore";
 
 const usePostComment = () => {
+	// const emoji = ['😘','😙']
 	const [isCommenting, setIsCommenting] = useState(false);
 	const showToast = useShowToast();
 	const authUser = useAuthStore((state) => state.user);
@@ -30,6 +31,7 @@ const usePostComment = () => {
 			showToast("Error", error.message, "error");
 		} finally {
 			setIsCommenting(false);
+			
 		}
 	};
 

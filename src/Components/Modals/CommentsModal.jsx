@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import {
   Button,
   Flex,
@@ -11,19 +12,58 @@ import {
 } from "@chakra-ui/react";
 import Comment from "../Comment/Comment";
 import usePostComment from "../../hooks/usePostComment";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CommentsModal = ({ isOpen, onClose, post }) => {
+  const emoji = [
+    {
+      emoj:"👍",
+    },
+    {
+      emoj:"😉",
+    },
+    {
+      emoj:"😀",
+    },
+    {
+      emoj:"😠",
+    },
+    {
+      emoj:"😢",
+    },
+    {
+      emoj:"😋",
+    },
+    {
+      emoj:"🤣",
+    },
+    {
+      emoj:"😲",
+    },
+    {
+      emoj:"😳",
+    },
+    {
+      emoj:"😊",
+    },
+    {
+      emoj:"😞",
+    },
+    {
+      emoj:"🤔",
+    },
+  ];
   const { handlePostComment, isCommenting } = usePostComment();
   const commentRef = useRef(null);
   const commentsContainerRef = useRef(null);
+  const [setedEmoji,SetsetedEmoji] = useState("");
   const handleSubmitComment = async (e) => {
     // do not refresh the page, prevent it
     e.preventDefault();
     await handlePostComment(post.id, commentRef.current.value);
     commentRef.current.value = "";
   };
-
+  const [value,setValue] = useState("");
   useEffect(() => {
     const scrollToBottom = () => {
       commentsContainerRef.current.scrollTop =
@@ -36,6 +76,18 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
     }
   }, [isOpen, post.comments.length]);
 
+  const handleEmojiClick = (selectedEmoji) => {
+    SetsetedEmoji(selectedEmoji);
+    setValue((prevValue) => prevValue + selectedEmoji);
+  };
+
+  // const backspace = (event) => {
+  //   if(event.key === 'Backspace'){
+  //     console.log("clicked backspace");
+  //     let str = value;
+  //     setValue(str.slice(0,-1));
+  //   }
+  // }
   return (
     <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInLeft">
       <ModalOverlay />
@@ -56,7 +108,15 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
             ))}
           </Flex>
           <form onSubmit={handleSubmitComment} style={{ marginTop: "2rem" }}>
-            <Input placeholder="Comment" size={"sm"} ref={commentRef} />
+          <div className="emoji-wrape" style={{display:"flex", padding:'15px', gap:'5px'}}>
+              {emoji.map((item,index) => 
+                <div className="emoji" key={index}>
+                    <span style={{cursor:'pointer'}} onClick={() => handleEmojiClick(item.emoj)}>{item.emoj}</span>
+                </div>
+              )}
+          </div>
+          {/* {console.log(commentRef)} */}
+            <Input placeholder="Comment" size={"sm"} ref={commentRef} onChange={(e) => setValue(e.target.value)} value={value}/>
             <Flex w={"full"} justifyContent={"flex-end"}>
               <Button
                 type="submit"
