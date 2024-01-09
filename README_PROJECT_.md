@@ -5,7 +5,7 @@ Thank you
 I learn to react js and firebase very well in this project. 
 
 # Description
-In Instagram clone: Login and Signup you password. Change account type private or public Indicates that users exists as you type username when signing up  Recommend and Profile views Like,message, send video or img, follow, unfollow, remove followers, edit profile,  Comment, Remove tag, Copy post link, Delete post, Edit post, Open post.Search users. Edit your profile From username, Fullname or Bio, social links to tags.
+In Instagram clone: Login and Signup your password with google. That users exists as you type username when signing up  Recommend and Profile views Like,message,  follow, unfollow, remove followers, edit profile,  Comment, Remove tag,  Delete post, Edit post, Open post. Search users. Edit your profile From username, Fullname or Bio.
 
 # Installation
 npm install
