@@ -1,0 +1,25 @@
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+/* ... rest of your styles ... */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+/* Navigation Styles */
+.nav-flush .nav-link {
+  border-radius: 0; /* Remove border radius from navigation links */
+}
+
+/* ... rest of your styles ... */
