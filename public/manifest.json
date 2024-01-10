@@ -1,0 +1,25 @@
+{
+  "short_name": "Instagram",
+  "name": "React App",
+  "icons": [
+    {
+      "src": "https://static.cdninstagram.com/rsrc.php/v3/yG/r/De-Dwpd5CHc.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://static.cdninstagram.com/rsrc.php/v3/yG/r/De-Dwpd5CHc.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://static.cdninstagram.com/rsrc.php/v3/yG/r/De-Dwpd5CHc.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
