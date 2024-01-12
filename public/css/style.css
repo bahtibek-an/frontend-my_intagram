@@ -1,0 +1,51 @@
+/* SMALL */
+.icon-sm {
+    font-size: 2rem;
+}
+
+.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+/* MEDIUM */
+.icon-md {
+    font-size: 3.5rem;
+}
+
+.avatar-md {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+}
+
+/* LARGE */
+.icon-lg{
+    font-size: 9rem;
+}
+
+.avatar-lg {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+}
+
+.fa-heart{
+    font-size: 1rem;
+}
+
+.xsmall {
+    font-size: 0.65rem;
+}
+
+.grid-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.image-lg{
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+}
