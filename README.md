@@ -1,105 +1,90 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+# Welcome to the My Instagram  
 
-## SPECIFICATIONS
-This project is about creating a clone of Instagram.
+## Task
+This is a simple Instagram clone project built using the Laravel PHP framework and the Vite JavaScript build tool. The project includes features such as creating and editing posts, following and unfollowing users, liking and commenting on posts, searching for users, and viewing user profiles.
 
-To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
+### 1. Creating Post
+- Users can create posts with three types of categories.
+- Posts include a description and an image.
 
-You are free to implement the schema you want.
+### 2. Editing Profile
+- Users can edit their profile by changing their name and email.
+- Users can add an introduction section to their profile.
 
-You can also be creative on the design. You should still looks "like" instagram.
+### 3. Follow and Unfollow
+- Users can follow and unfollow other users.
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+### 4. Like and Comment
+- Users can like and comment on posts using emojis.
 
-Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
+### 5. Navbar Search
+- The navbar includes a search bar.
+- Users can search for other users by entering their username.
 
-Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
+### 6. Profile Page
+- Users can view their own posts on their profile page.
+- Users can see the posts of other users when visiting their profile.
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+## Description
+This Instagram clone project replicates some of the core functionalities of the popular social media platform. Users can create posts with categories, edit their profiles, follow and unfollow other users, like and comment on posts, and use the search bar to find other users. The project is built using Laravel for the backend and Vite for the frontend, providing a modern and efficient development environment.
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+## Installation
+Follow these steps to set up the Instagram clone project:
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+1. Clone the repository:
 
-On the css/colors/design, you can be creative.
+```bash
+git clone https://github.com/your-username/instagram-clone.git
+```
 
-## FEATURES
-- Login, Signup
+2. Navigate to the project directory:
 
-- Change you password.
+```bash
+cd instagram-clone
+```
 
-- Change account type private or public (Default: public).
+3. Install PHP dependencies:
 
-- Indicates that users exists as you type username when signing up.
+```bash
+composer install
+```
 
-- About, Developer, Help, 404, No such user, No such group page.
+4. Install JavaScript dependencies:
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
+```bash
+npm install
+```
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
+5. Copy the `.env.example` file to `.env` and configure your database settings.
 
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
+6. Generate application key:
 
-- Time ago format used everywhere.
+```bash
+php artisan key:generate
+```
 
-- Custom Video and Audio player.
+7. Migrate the database:
 
-- Add tags to describe yourself much more.
+```bash
+php artisan migrate
+```
 
-- Edit your profile (From username, Bio, social links to tags).
+## Usage
+1. Run the development server:
 
-- Get suggestions on whome to follow (you can also refresh suggestions).
+```bash
+php artisan serve
+```
 
-- Know what are some of the most popular hashtags.
+2. In a separate terminal, run Vite for the frontend:
 
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
+```bash
+npm run dev
+```
+Once the installation is complete, you can access the Instagram clone project by visiting [http://localhost:8000](http://localhost:8000) in your web browser. Register a new account or log in, and start exploring the various features, including creating and editing posts, following and unfollowing users, liking and commenting on posts, searching for users, and viewing user profiles.
 
-- Shows images in Theatre mode.
+### The Core Team
+Tumaris Murodova
 
-- Explore people, photos, videos, audios and groups.
-
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
-
-- Create conversation with your followings and give your conversation a title.
-
-- Message emoji, Text, Image, Sticker.
-
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
-
-- Bookmark the post if you liked it.
-
-- Make a user favourite if you like him/her.
-
-- Create a group with your followings.
-
-- Shows newest member, members you know from the group.
-
-- Add/remove members.
-
-- Edit group's settings.
-
-- Shows if a user is online.
-
-- Love a group, invite your followings to the group.
-
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
-
-- If a text post is large, then a glimpse of the post is shown and you can load more.
-
-- You will be always prompted from deleting a post to blocking someone.
-
-- Search users, groups and hashtags.
-
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
-
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
-
-Your .gitignore must remove node_modules/
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
