@@ -1,6 +1,13 @@
 # Welcome to My Instagram
 My Instagram App
 
+
+
+#Bugs have been fixed, only the codes have not been uploaded to github <br />
+#Codes have been uploaded to branch tolqinov_oqilbek in the Instagram repository in my Git Hub profile.
+
+
+
 ## Task
 
 [Live Demo](https://my-instagram-tapp.netlify.app)
