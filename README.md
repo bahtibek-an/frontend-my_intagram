@@ -1,12 +1,16 @@
 # Welcome to My Instagram
 My Instagram App
 
+<br />
+<br />
+<br />
 
-
-# Bugs have been fixed, only the codes have not been uploaded to github <br />
+# Bugs have been fixed, only the codes have not been uploaded to github <br /> <br /> <br />
 # Codes have been uploaded to branch tolqinov_oqilbek in the Instagram repository in my Git Hub profile.
 
-
+<br />
+<br />
+<br />
 
 ## Task
 
