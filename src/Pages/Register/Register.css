@@ -1,0 +1,59 @@
+/* Add a fade-in animation for the background */
+.body {
+  /* ... existing styles ... */
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add a slide-up animation for the form */
+.form-signin {
+  /* ... existing styles ... */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add transitions for smooth appearance changes */
+.form-signin,
+.form-signin input[type="email"],
+.form-signin input[type="password"] {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adjust styles for focused state */
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+  border-color: #6cb2eb; /* Change to your desired border color on focus */
+  box-shadow: 0 0 10px rgba(108, 178, 235, 0.5); /* Change to your desired box shadow on focus */
+}
+
+.form-signin input[type="email"]:focus,
+.form-signin input[type="password"]:focus {
+  outline: none;
+  border-color: #6cb2eb; /* Change to your desired border color on focus */
+  box-shadow: 0 0 10px rgba(108, 178, 235, 0.5); /* Change to your desired box shadow on focus */
+}
+
+/* Optional: Add hover effect */
+.form-signin:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Change to your desired box shadow on hover */
+}
