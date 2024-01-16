@@ -1,8 +1,5 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+# Description
 
-## SPECIFICATIONS
 This project is about creating a clone of Instagram.
 
 To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
@@ -11,95 +8,91 @@ You are free to implement the schema you want.
 
 You can also be creative on the design. You should still looks "like" instagram.
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+A little about Instagram (source wikipedia): Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
 
 Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
 
 Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+# Task
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+Login, Signup
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+Change you password.
 
-On the css/colors/design, you can be creative.
+Change account type private or public (Default: public).
 
-## FEATURES
-- Login, Signup
+Indicates that users exists as you type username when signing up.
 
-- Change you password.
+About, Developer, Help, 404, No such user, No such group page.
 
-- Change account type private or public (Default: public).
+Follow, Unfollow, Recommend, Profile views, Block, Unblock.
 
-- Indicates that users exists as you type username when signing up.
+Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
 
-- About, Developer, Help, 404, No such user, No such group page.
+Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
+Time ago format used everywhere.
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
+Custom Video and Audio player.
 
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
+Add tags to describe yourself much more.
 
-- Time ago format used everywhere.
+Edit your profile (From username, Bio, social links to tags).
 
-- Custom Video and Audio player.
+Get suggestions on whome to follow (you can also refresh suggestions).
 
-- Add tags to describe yourself much more.
+Know what are some of the most popular hashtags.
 
-- Edit your profile (From username, Bio, social links to tags).
+Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
 
-- Get suggestions on whome to follow (you can also refresh suggestions).
+Shows images in Theatre mode.
 
-- Know what are some of the most popular hashtags.
+Explore people, photos, videos, audios and groups.
 
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
+Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
 
-- Shows images in Theatre mode.
+Create conversation with your followings and give your conversation a title.
 
-- Explore people, photos, videos, audios and groups.
+Message emoji, Text, Image, Sticker.
 
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
+Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
 
-- Create conversation with your followings and give your conversation a title.
+Bookmark the post if you liked it.
 
-- Message emoji, Text, Image, Sticker.
+Make a user favourite if you like him/her.
 
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
+Create a group with your followings.
 
-- Bookmark the post if you liked it.
+Shows newest member, members you know from the group.
 
-- Make a user favourite if you like him/her.
+Add/remove members.
 
-- Create a group with your followings.
+Edit group's settings.
 
-- Shows newest member, members you know from the group.
+Shows if a user is online.
 
-- Add/remove members.
+Love a group, invite your followings to the group.
 
-- Edit group's settings.
+Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
 
-- Shows if a user is online.
+If a text post is large, then a glimpse of the post is shown and you can load more.
 
-- Love a group, invite your followings to the group.
+You will be always prompted from deleting a post to blocking someone.
 
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
+Search users, groups and hashtags.
 
-- If a text post is large, then a glimpse of the post is shown and you can load more.
+Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag. Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down). Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
 
-- You will be always prompted from deleting a post to blocking someone.
+You will write the url in my_instagram_url.txt. Nothing more, just the URL.
 
-- Search users, groups and hashtags.
 
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
 
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
+# Installation
 
-Your .gitignore must remove node_modules/
+npm i or npm install
+npm start
+
+# Usage
+
+https://localhost:3000/ or my_instagram_url.txt
