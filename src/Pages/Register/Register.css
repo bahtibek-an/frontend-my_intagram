@@ -1,0 +1,53 @@
+.body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.form-signin {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-signin,
+.form-signin input[type="email"],
+.form-signin input[type="password"] {
+  transition: all 0.3s ease-in-out;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+  border-color: #6cb2eb; 
+  box-shadow: 0 0 10px rgba(108, 178, 235, 0.5); 
+}
+
+.form-signin input[type="email"]:focus,
+.form-signin input[type="password"]:focus {
+  outline: none;
+  border-color: #6cb2eb; 
+  box-shadow: 0 0 10px rgba(108, 178, 235, 0.5); 
+}
+
+
+.form-signin:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
