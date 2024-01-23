@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://www.alucoildesign.com/assets/app/media/img/bg/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(8px);
+}
+
+.blur {
+  backdrop-filter: blur(15px);
+}
+
+.form-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  background: transparent;
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(125px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+  color: aliceblue;
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: aliceblue;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: aliceblue;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: aliceblue;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forget {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+.forget label a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.forget label a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.register {
+  font-size: 0.9em;
+  color: aliceblue;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: 500px;
+}
+
+@media screen and (max-width: 450px) {
+  .mobile-none {
+    display: none;
+  }
+
+  .post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
