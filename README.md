@@ -6,9 +6,11 @@ The objective of this project is to develop a simplified clone of Instagram usin
 ## Description
 1. **Create Post:**
    - Users should be able to create and share posts, including images and captions.
+    ***After choosing image, wait a few seconds, need to view 'borar archivo' or 'image selected' and after that write caption and description***
 
-2. **Like and Comment:**
-   - Users can like and comment on posts made by others.
+2. **Like and Comment:***
+   - Users can like and comment on posts made by others. ***Click two times for emoji list opening**
+   - For deleting your own posts click button ***"...", opened modal with delete button for post***
 
 3. **Follow/Unfollow:**
    - Users have the ability to follow or unfollow other users, creating a social network aspect.
@@ -76,3 +78,9 @@ php artisan serve and npm run dev
 
 6. **Edit Profile:**
    - Modify your profile information and customize your account.
+
+### The Core Team
+
+
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
