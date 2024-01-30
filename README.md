@@ -1,5 +1,7 @@
 # My Instagram
 
+![My Instagram]()
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
@@ -8,10 +10,10 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## Description
+## Introduction
 Welcome to My Instagram, a web application that lets you share your favorite moments through photos and connect with friends and family. With a user-friendly interface and intuitive features, My Instagram offers a seamless experience for sharing and discovering captivating visuals.
 
-## Task
+## Features
 - **Photo Sharing**: Upload and share your favorite photos with your followers.
 - **Likes and Comments**: Interact with posts by liking and leaving comments.
 - **User Profiles**: Create your own profile with a profile picture and bio.
