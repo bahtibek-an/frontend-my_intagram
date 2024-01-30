@@ -1,1 +1,1 @@
-https://hushnud-instagaram.netlify.app/
+https://instagramm-clone-react.netlify.app/
