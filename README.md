@@ -4,7 +4,7 @@ My Instagram Sugdiena Bahodirzoda
 
 ## Demo
 
-URL="https://zokirbek-instaclone.netlify.app/auth"
+URL="https://beamish-taiyaki-81f169.netlify.app/auth"
 
 ## Task
 
