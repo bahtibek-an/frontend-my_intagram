@@ -1,5 +1,6 @@
 # Welcome to my Instagram Project
-demo:https://loquacious-lokum-8ba65d.netlify.app
+demo:
+https://fantastic-bublanina-fe3af2.netlify.app
 ![Example of the project](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png)
 ## Description
 This Instagram project was created with a full-stack architecture, utilizing Node.js for the backend and React for the frontend. The database is powered by MongoDB. The project includes features such as user registration, photo sharing, following/unfollowing users, liking posts, and more.
