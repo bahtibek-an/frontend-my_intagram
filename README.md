@@ -4,7 +4,11 @@ My Instagram Sugdiena Bahodirzoda
 
 ## Demo
 
+<<<<<<< HEAD
 URL="https://beamish-taiyaki-81f169.netlify.app/auth"
+=======
+URL="(https://beamish-taiyaki-81f169.netlify.app/auth)"
+>>>>>>> f5e6bd69cec903bf8fe86ac5bed9a0ecb015b2e0
 
 ## Task
 
