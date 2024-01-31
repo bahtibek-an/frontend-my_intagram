@@ -51,7 +51,7 @@ const Search = () => {
           onClick={onOpen}
         >
           <SearchLogo />
-          <Box display={{ base: "none", md: "block" }}>Search</Box>
+          <Box display={{ base: "none", md: "block" }} style={{color:"black"}}>Search</Box>
         </Flex>
       </Tooltip>
 

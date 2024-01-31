@@ -25,7 +25,7 @@ const SuggestedUser = ({ user, setUser }) => {
           <Avatar src={user.profilePicURL} size={"md"} />
         </Link>
         <VStack spacing={2} alignItems={"flex-start"}>
-          <Link to={`/${user.username}`}>
+          <Link to={`/${user.username}`} style={{color:"black"}}>
             <Box fontSize={12} fontWeight={"bold"}>
               {user.fullName}
             </Box>

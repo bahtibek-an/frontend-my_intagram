@@ -16,6 +16,7 @@ const Login = () => {
         placeholder="Email"
         fontSize={14}
         type="email"
+
         size={"sm"}
         value={inputs.email}
         onChange={(e) => setInputs({ ...inputs, email: e.target.value })}

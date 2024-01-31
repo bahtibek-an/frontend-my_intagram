@@ -60,6 +60,7 @@ const CreatePost = () => {
         hasArrow
         label={"Create"}
         placement="right"
+
         ml={1}
         openDelay={500}
         display={{ base: "block", md: "none" }}
@@ -74,8 +75,8 @@ const CreatePost = () => {
           justifyContent={{ base: "center", md: "flex-start" }}
           onClick={onOpen}
         >
-          <CreatePostLogo />
-          <Box display={{ base: "none", md: "block" }}>Create</Box>
+          <CreatePostLogo style={{background:"black"}}/>
+          <Box style={{color:"black"}} display={{ base: "none", md: "block" }}>Create</Box>
         </Flex>
       </Tooltip>
 

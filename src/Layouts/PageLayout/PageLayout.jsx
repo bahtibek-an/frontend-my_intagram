@@ -15,7 +15,7 @@ const PageLayout = ({ children }) => {
   if (checkingUserIsAuth) return <PageLayoutSpinner />;
 
   return (
-    <Flex flexDir={canRenderNavbar ? "column" : "row"}>
+    <Flex flexDir={canRenderNavbar ? "column" : "row"} style={{background:'white'}}>
       {/* sidebar on the left */}
       {canRenderSidebar ? (
         <Box w={{ base: "70px", md: "240px" }}>

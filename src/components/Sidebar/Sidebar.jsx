@@ -20,6 +20,7 @@ const Sidebar = () => {
       top={0}
       left={0}
       px={{ base: 2, md: 4 }}
+      style={{background:'white'}}
     >
       <Flex direction={"column"} gap={10} w="full" height={"full"}>
         <Link

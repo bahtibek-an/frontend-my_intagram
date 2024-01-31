@@ -11,7 +11,7 @@ const AuthForm = () => {
 
   return (
     <>
-      <Box border={"1px solid gray"} borderRadius={4} padding={5}>
+      <Box border={"1px solid gray"} borderRadius={4} padding={5} style={{background:"black"}}>
         <VStack spacing={4}>
           <Image src="/logo.png" h={24} cursor={"pointer"} alt="Instagram" />
           {isLogin ? <Login /> : <Signup />}
@@ -33,7 +33,7 @@ const AuthForm = () => {
         </VStack>
       </Box>
 
-      <Box border={"1px solid gray"} borderRadius={4} padding={5}>
+      <Box border={"1px solid gray"} borderRadius={4} padding={5}  style={{background:"black"}}>
         <Flex alignItems={"center"} justifyContent={"center"}>
           <Box mx={2} fontSize={14}>
             {isLogin ? "Don't have an account?" : "Already have an account?"}

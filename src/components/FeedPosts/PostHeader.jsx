@@ -37,7 +37,7 @@ const PostHeader = ({ post, creatorProfile }) => {
           <SkeletonCircle size="10" />
         )}
 
-        <Flex fontSize={12} fontWeight={"bold"} gap="2">
+        <Flex fontSize={12} fontWeight={"bold"} color={"black"} gap="2">
           {creatorProfile ? (
             <Link to={`/${creatorProfile.username}`}>
               {creatorProfile.username}
@@ -54,10 +54,10 @@ const PostHeader = ({ post, creatorProfile }) => {
           size={"xs"}
           bg={"transparent"}
           fontSize={12}
-          color={"blue.500"}
+          color={"black"}
           fontWeight={"bold"}
           _hover={{
-            color: "white",
+            color: "aqua",
           }}
           transition={"0.2s ease-in-out"}
           onClick={handleFollowUser}

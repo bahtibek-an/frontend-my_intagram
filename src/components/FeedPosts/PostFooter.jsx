@@ -61,7 +61,7 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
           <CommentLogo />
         </Box>
       </Flex>
-      <Text fontWeight={600} fontSize={"sm"}>
+      <Text fontWeight={600} fontSize={"sm"} color={"black"}>
         {likes} likes
       </Text>
 
@@ -82,7 +82,7 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
           {post.comments.length > 0 && (
             <Text
               fontSize="sm"
-              color={"gray"}
+              color={"black"}
               cursor={"pointer"}
               onClick={onOpen}
             >
@@ -102,13 +102,14 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
           justifyContent={"space-between"}
           w={"full"}
         >
-          <InputGroup>
+          <InputGroup >
             <Input
               variant={"flushed"}
               placeholder={"Add a comment..."}
               fontSize={14}
               onChange={(e) => setComment(e.target.value)}
               value={comment}
+              style={{borderBottom:"1px solid black",color:"black"}}
               ref={commentRef}
             />
             <InputRightElement>
