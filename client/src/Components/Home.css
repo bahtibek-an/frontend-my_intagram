@@ -1,0 +1,339 @@
+:root{
+    --purple-color:rgb(221,42,123);
+    --blue-color:rgb(81, 91, 212);
+    --biolet-color:rgb(129, 52, 175);
+    --yolow-color : rgb(254, 218, 119);
+    --orange-color:rgb(245, 133, 41);
+}
+.wrappe{
+    display: flex;
+    justify-content: space-between;
+}
+.link {
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header{
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    border-right: 1px solid #636262;
+    align-items: start;
+    gap: 30px   ;
+    /* justify-content: space-between; */
+}
+.like_btn{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.like_btn span {
+    color: #000;
+}
+.comment_btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post{
+    display: flex;
+    align-items: center;
+}
+.title_user_name{
+    cursor: pointer;
+}
+
+.comment_block{
+    width: 340px;
+    margin-left: 40px;
+    margin-bottom: 120px;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    align-items: end;
+    justify-content: center;
+    height: 400px;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-bottom:10px;
+}
+.emoji{
+    cursor: pointer;
+    margin-right: 10px;
+}
+.form_block_btn{
+    margin-top: 20px;
+}
+.comment_form{
+    z-index: 999;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+.comment_block button {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: var(--blue-color);
+    color: #000;
+    border: none;
+    margin-left: 5px;
+}
+.comments{
+    /* position: absolute; */
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 5px;
+}
+.user_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.user_info{
+    display: flex;
+    margin-bottom:10px;
+    text-decoration: none;
+    color: #000;
+    align-items: end;
+    cursor: pointer;
+    gap: 10px;
+}
+.g{
+    margin-bottom: 6px;
+    margin-left: 5px;
+    padding: 1px 7px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+    color: var(--blue-color);
+}
+.user_name{
+    margin-bottom: 6px;
+    color: #000;
+}
+.add_post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.user_comment{
+    width: 100%;
+    gap: 10px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+.user_comment b {
+    margin-top: 5px;
+    color: #000;
+}
+.user_comment_name{
+    color: #000;
+}
+.add_post span {
+    color: #000;
+}
+.emoji_block{
+    padding-top: 10px;
+}
+.post_main{
+    width: 100%;
+    height: auto;
+    padding-bottom: 500px;
+    display: flex;
+    align-items: start;
+    background-color: #fff;
+    justify-content:start;
+}
+.posts_wrape{
+    margin-left: 200px;
+}
+.posts_wrape{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 50px;
+}
+.liked{
+    color: red;
+    cursor: pointer;
+}
+.post_media_wrapper{
+    margin-bottom: 0;
+    background-position:center center ;
+    background-attachment: fixed;
+    background-size: 100%;
+    object-fit: cover;
+}
+.post_media_wrapper img {
+    max-width: 370px;
+    height: 400px;
+    margin-bottom: 0;
+}
+.post_title_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 0px;
+    gap: 10px;
+    margin-top: 0;
+}
+.post_title_wrapper p {
+    color: #000;
+}
+.post_title_wrapper b {
+    color: #000;
+}
+.post_actions{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 0px;
+    margin-bottom: 10px;
+}
+.comment_actions{
+    width: 100%;
+}
+.comment_view_span{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+    color: #000;
+    justify-content: start;
+    margin-top: 11px;
+}
+
+.input_block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input_btn{
+    outline: none;
+    padding: 7px;
+    color: var(--blue-color);
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.send_icon{
+    color: #000;
+}
+.comment_input{
+    width: 100%;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 5px;
+    color: #000;
+    background: transparent;
+    outline: none;
+}
+
+.post_buttons{
+    cursor: pointer;
+    color: #000;
+}
+.post_block{
+    margin-top: 0;
+    margin-bottom: 0;
+    /* width: 500px; */
+    padding-bottom: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+}
+.logo-container{
+    max-width: 300px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.null_comment{
+    display: none;
+}
+.null {
+    display: none;
+}
+.search_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon{
+    color: #000;
+}
+.search_container input {
+    width: 300px;
+    padding: 7px;
+    border: none;
+    border-radius:13px ;
+}
+.client_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+.recomended_users_wrape{
+    width: 400px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+.recomended_users_wrape h3 {
+    color: #000;
+}
+.recomended_user{
+    cursor: pointer;
+}
+.recomended_user{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    gap: 0px;
+}
+.recomended_user_name{
+    color: #000;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.folow_btn{
+    margin-left: 35px;
+    padding: 1px 7px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+    color: var(--blue-color);
+}

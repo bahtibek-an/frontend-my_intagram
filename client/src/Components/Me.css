@@ -1,0 +1,101 @@
+.user_wrape{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #fff;
+    color: #2f00ff;
+    align-items: center;
+    justify-content: center;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 100px;
+    width: 100%;
+}
+.header_user_info_posts_length b{
+    margin-right: 3px;
+}
+.user_posts{
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    gap: 3px;
+}
+.user_post{
+    position: relative;
+}
+.header_user_info_avatar img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-top: 32px;
+}
+.header_user{
+    display: flex;
+    gap: 100px;
+    position: absolute;
+    top: 0;
+    
+}
+.header_user_info_subscribers{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+}
+.info_wrape{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 10px;
+}
+.bio{
+    max-width: 800px;
+    padding-top: 10px;
+    text-align: start;
+}
+.header_user_info_posts_length{
+    margin-left: 50px;
+}
+.header_user_info_name{
+    display: flex;
+    gap: 30px;
+} 
+.header_user_info_name b{
+    font-size: 30px;
+}
+.edit_btn{
+    cursor: pointer;
+}
+.user_actions{
+    display: flex;
+    align-items: center;
+}
+.user_edit_btn{
+    width: 100px;
+    border: 1px solid #ed0f0f;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.header_user_info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.user_post img {
+    width: 400px;
+    height: 300px;
+}
+.delete_icon{
+    color: rgb(246, 5, 5);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
