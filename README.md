@@ -4,7 +4,7 @@ My Instagram Sugdiena Bahodirzoda
 
 ## Demo
 
-URL="(https://frabjous-bavarois-a9a9d6.netlify.app)"
+URL="(https://beamish-taiyaki-81f169.netlify.app/auth)"
 
 ## Task
 
