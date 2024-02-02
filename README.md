@@ -1,105 +1,48 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+Welcome to My Instagram
+Task
+About the Project "My Instagram" is a full-fledged web application created to showcase cutting-edge technologies in the realm of web development. It encompasses features commonly found in photo-sharing and social networking applications.
 
-## SPECIFICATIONS
-This project is about creating a clone of Instagram.
+Technologies Used React: Utilized for building the user interface, ensuring a fast and responsive application.
 
-To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
+Redux Toolkit: Applied for state management, ensuring uniform and efficient data handling.
 
-You are free to implement the schema you want.
+Ant Design: Provides styling and components, contributing to a sleek and modern user interface.
 
-You can also be creative on the design. You should still looks "like" instagram.
+FontAwesome: Integrates iconic font and CSS toolkit for scalable vector icons.
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+Firebase: Employs Firebase services for authentication, real-time database, and hosting.
 
-Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
+Sass: Enhances stylesheet functionality, providing a more structured and maintainable codebase.
 
-Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
+Styled Components: Enables component-level styling for a cohesive and maintainable design system.
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+MUI Material: Incorporates Material-UI components for a consistent and polished user experience. What is the problem And where is the challenge
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+Description
+Features User authentication and authorization. Photo upload and sharing functionality. Real-time updates using Firebase. Responsive and intuitive design with Ant Design and MUI Material components. Explore and Enjoy! Feel free to explore the codebase, try out the features, and leverage the power of modern web development showcased in this "My Instagram" demo project. If you have any questions or feedback, don't hesitate to reach out!
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+Installation
+How to install your project npm install make make re
 
-On the css/colors/design, you can be creative.
+Usage
+User Authentication:
 
-## FEATURES
-- Login, Signup
+Users can sign up for an account or log in using existing credentials. Firebase authentication services are utilized to secure user accounts. Photo Upload and Sharing:
 
-- Change you password.
+Authenticated users can upload photos from their devices. Uploaded photos are stored in Firebase Cloud Storage or a similar storage service. Users can share their photos, and the application ensures a seamless and visually pleasing display. Real-time Updates:
 
-- Change account type private or public (Default: public).
+Firebase Realtime Database is employed to provide real-time updates on activities within the application. Users receive instant notifications or updates when others upload new photos or engage with their content. State Management with Redux Toolkit:
 
-- Indicates that users exists as you type username when signing up.
+Redux Toolkit manages the application state, providing a predictable and centralized data store. Components interact with the state through actions and reducers, ensuring a consistent and scalable state management system. UI Styling and Components:
 
-- About, Developer, Help, 404, No such user, No such group page.
+Ant Design, MUI Material, FontAwesome, Sass, and Styled Components collectively contribute to the project's UI. These libraries and tools provide pre-designed components, icons, and styling to create a modern and visually appealing user interface. Responsive Design:
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
+The application is designed to be responsive, ensuring a seamless user experience across various devices and screen sizes. Media queries and responsive design practices are implemented to adapt the layout and styling accordingly. Project Structure:
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
+The project is organized with a clear structure, separating components, styles, and functionality. React components are modular and reusable, enhancing maintainability and scalability. Development Environment:
 
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
+Developers can clone the repository, install dependencies, and run the application locally for testing and further development. The development environment includes features like hot-reloading for an efficient development workflow. How does it work
 
-- Time ago format used everywhere.
-
-- Custom Video and Audio player.
-
-- Add tags to describe yourself much more.
-
-- Edit your profile (From username, Bio, social links to tags).
-
-- Get suggestions on whome to follow (you can also refresh suggestions).
-
-- Know what are some of the most popular hashtags.
-
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
-
-- Shows images in Theatre mode.
-
-- Explore people, photos, videos, audios and groups.
-
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
-
-- Create conversation with your followings and give your conversation a title.
-
-- Message emoji, Text, Image, Sticker.
-
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
-
-- Bookmark the post if you liked it.
-
-- Make a user favourite if you like him/her.
-
-- Create a group with your followings.
-
-- Shows newest member, members you know from the group.
-
-- Add/remove members.
-
-- Edit group's settings.
-
-- Shows if a user is online.
-
-- Love a group, invite your followings to the group.
-
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
-
-- If a text post is large, then a glimpse of the post is shown and you can load more.
-
-- You will be always prompted from deleting a post to blocking someone.
-
-- Search users, groups and hashtags.
-
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
-
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
-
-Your .gitignore must remove node_modules/
+./my_project argument1 argument2
+The Core Team
+Made at Qwasar SV -- Software Engineering School <img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' />

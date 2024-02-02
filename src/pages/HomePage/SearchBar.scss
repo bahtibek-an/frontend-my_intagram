@@ -1,0 +1,25 @@
+/** @format */
+
+.sorch-modal {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 57%;
+  min-height: 283px;
+  max-width: 434px;
+  z-index: 10;
+  background-color: #fff;
+  .card {
+    .user-image-container-search {
+      width: 70px;
+      cursor: pointer;
+      justify-content: initial;
+    //   height: 70px;
+      align-items: center;
+      margin: 20px;
+      display: flex;
+    }
+  }
+}
