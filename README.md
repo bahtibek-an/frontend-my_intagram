@@ -1,105 +1,90 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+# Frontend My Instagram
 
-## SPECIFICATIONS
-This project is about creating a clone of Instagram.
+## Task
+Create a simple Instagram clone using ReactJS for the frontend and Firebase for the backend. The project should include the following features:
 
-To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
+- User authentication (Sign up, login, logout)
+- Post creation, including images and captions
+- User profile updates
+- Follow/unfollow functionality
+- Search for users
+- Like and comment on posts, including emoji support
 
-You are free to implement the schema you want.
+## Description
 
-You can also be creative on the design. You should still looks "like" instagram.
+This Instagram project aims to replicate the core functionalities of the popular social media platform. Users will be able to sign up, log in, and customize their profiles. They can create posts by uploading images and adding captions. Users can follow and unfollow other users, search for specific users, and interact with posts by liking and commenting, including support for emojis.
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+The project utilizes ReactJS for the frontend, providing a responsive and dynamic user interface. Firebase serves as the backend, offering authentication, real-time database, and storage services. This combination ensures a scalable and efficient solution for building a social media platform.
 
-Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
+## Installation
 
-Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/instagram-react-firebase.git
+   ```
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+2. Navigate to the project directory:
+   ```bash
+   cd instagram-react-firebase
+   ```
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+4. Create a Firebase project:
+   - Visit [Firebase Console](https://console.firebase.google.com/).
+   - Click on "Add Project" and follow the setup instructions.
 
-On the css/colors/design, you can be creative.
+5. Configure Firebase:
+   - Copy your Firebase project configuration from the Firebase Console.
+   - Create a file named `.env` in the project root and add your Firebase configuration:
+     ```env
+     REACT_APP_FIREBASE_API_KEY=your-api-key
+     REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+     REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+     REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+     REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+     REACT_APP_FIREBASE_APP_ID=your-app-id
+     ```
 
-## FEATURES
-- Login, Signup
+6. Enable authentication providers in the Firebase Console:
+   - Go to Authentication > Sign-in method.
+   - Enable Email/Password and any other authentication methods you want to support.
 
-- Change you password.
+7. Run the application:
+   ```bash
+   npm start
+   ```
 
-- Change account type private or public (Default: public).
+8. Open your browser and visit `http://localhost:3000` to view the Instagram clone.
 
-- Indicates that users exists as you type username when signing up.
+## Usage
 
-- About, Developer, Help, 404, No such user, No such group page.
+1. Sign Up:
+   - Create a new account using a valid email and password.
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
+2. Log In:
+   - Log in with your email and password.
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
+3. Profile:
+   - Update your profile information, including username and profile picture.
 
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
+4. Post:
+   - Create a new post by uploading an image and adding a caption.
 
-- Time ago format used everywhere.
+5. Follow/Unfollow:
+   - Follow other users to see their posts on your feed.
+   - Unfollow users to stop seeing their posts on your feed.
 
-- Custom Video and Audio player.
+6. Search:
+   - Use the search functionality to find and explore other users.
 
-- Add tags to describe yourself much more.
+7. Like and Comment:
+   - Interact with posts by liking and commenting, including support for emojis.
 
-- Edit your profile (From username, Bio, social links to tags).
+8. Log Out:
+   - Log out of your account to secure your session.
 
-- Get suggestions on whome to follow (you can also refresh suggestions).
-
-- Know what are some of the most popular hashtags.
-
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
-
-- Shows images in Theatre mode.
-
-- Explore people, photos, videos, audios and groups.
-
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
-
-- Create conversation with your followings and give your conversation a title.
-
-- Message emoji, Text, Image, Sticker.
-
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
-
-- Bookmark the post if you liked it.
-
-- Make a user favourite if you like him/her.
-
-- Create a group with your followings.
-
-- Shows newest member, members you know from the group.
-
-- Add/remove members.
-
-- Edit group's settings.
-
-- Shows if a user is online.
-
-- Love a group, invite your followings to the group.
-
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
-
-- If a text post is large, then a glimpse of the post is shown and you can load more.
-
-- You will be always prompted from deleting a post to blocking someone.
-
-- Search users, groups and hashtags.
-
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
-
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
-
-Your .gitignore must remove node_modules/
+Feel free to explore and enjoy the Instagram-like experience on this ReactJS and Firebase-powered project!
