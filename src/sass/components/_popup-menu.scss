@@ -1,0 +1,40 @@
+.popup-menu {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+
+    background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        //position: fixed;
+        width: 40rem;
+        height: 35rem;
+        border-radius: 1rem;
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    &__item, &__close  {
+        height: 16.67%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $color-grey-light;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    &__item-red {
+        color:red;
+        font-weight: 700;
+    }
+}

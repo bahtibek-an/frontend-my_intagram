@@ -1,0 +1,36 @@
+.user {
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        max-width: 5.5rem;
+        max-height: 5.5rem;
+        border-radius: 100%;
+        object-fit:cover;
+        object-position:50% 50%;
+        border: 1px solid $color-grey-light;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column; 
+        margin-left: 1.7rem;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 1.4rem;
+
+        &:active {
+            color: $color-black-dark;
+        }
+    }
+
+    &__fullname {
+        font-size: 1.4rem;
+        color: $color-grey-dark-1;
+    }
+
+}
