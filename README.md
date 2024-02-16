@@ -1,105 +1,56 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+# Welcome to My Instagram
+***My Frontend Instagram***
 
-## SPECIFICATIONS
-This project is about creating a clone of Instagram.
+## Task
+The project task involves creating a social media platform using React. The goal is to develop a comprehensive application that encompasses various aspects of social networking, including user interaction, content sharing and more.
 
-To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
+The project aims to provide users with a seamless and engaging experience while navigating the platform. It involves implementing authentication mechanisms for user login and signup, allowing users to manage their accounts by changing profile info settings.
 
-You are free to implement the schema you want.
+One of the key focuses of the project is on facilitating user interaction. This includes features such as following and unfollowing other users, recommending users to follow.
 
-You can also be creative on the design. You should still looks "like" instagram.
+Content sharing and interaction are integral parts of the platform. Users can create and content, including text and image. The platform supports features like unlike and comment.
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+Messaging plays a crucial role in facilitating communication between users. The platform provides messaging capabilities, including one-on-one conversations and group chats, with support for various message types such as text, emojis, images, and stickers.
 
-Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
+The project also emphasizes user experience and usability, with features like custom avatars and intuitive user interfaces. It aims to provide users with a visually appealing and responsive application that enhances their overall experience.
 
-Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
+Overall, the project task involves building a robust and user-friendly social media platform that caters to the diverse needs of its users, fostering connections, fostering communities, and facilitating meaningful interactions in a digital environment.
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
-
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
-
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
-
-On the css/colors/design, you can be creative.
-
-## FEATURES
+## Description
+Features of this social media app
 - Login, Signup
 
-- Change you password.
+- Follow, Unfollow, Recommend, Profile views
 
-- Change account type private or public (Default: public).
+- Like, Comment, Delete post, Open post
 
-- Indicates that users exists as you type username when signing up.
+- Time ago format used everywhere
 
-- About, Developer, Help, 404, No such user, No such group page.
+- Edit your profile
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
+- Get suggestions.
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
+- Change your avatar
 
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
+- Search users
 
-- Time ago format used everywhere.
 
-- Custom Video and Audio player.
+## Installation
+Step by step explanation for install this project to local machine:
+```
+git clone <git repo link>
+```
+```
+npm install
+```
+```
+npm run dev
+```
+## Usage
+You can use the `Installation section` or just click the link: https://maqsud-instagram-qwasar.vercel.app/duck
 
-- Add tags to describe yourself much more.
+### The Core Team
+Maqsud Yusupov (7 - main season)
 
-- Edit your profile (From username, Bio, social links to tags).
-
-- Get suggestions on whome to follow (you can also refresh suggestions).
-
-- Know what are some of the most popular hashtags.
-
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
-
-- Shows images in Theatre mode.
-
-- Explore people, photos, videos, audios and groups.
-
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
-
-- Create conversation with your followings and give your conversation a title.
-
-- Message emoji, Text, Image, Sticker.
-
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
-
-- Bookmark the post if you liked it.
-
-- Make a user favourite if you like him/her.
-
-- Create a group with your followings.
-
-- Shows newest member, members you know from the group.
-
-- Add/remove members.
-
-- Edit group's settings.
-
-- Shows if a user is online.
-
-- Love a group, invite your followings to the group.
-
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
-
-- If a text post is large, then a glimpse of the post is shown and you can load more.
-
-- You will be always prompted from deleting a post to blocking someone.
-
-- Search users, groups and hashtags.
-
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
-
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
-
-Your .gitignore must remove node_modules/
+<span><i>Made at <a href="https://qwasar.io">Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt="Qwasar SV -- Software Engineering School's Logo" src="https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png" width="20px"></span>
