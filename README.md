@@ -10,11 +10,9 @@ One of the key focuses of the project is on facilitating user interaction. This 
 
 Content sharing and interaction are integral parts of the platform. Users can create and content, including text and image. The platform supports features like unlike and comment.
 
-Messaging plays a crucial role in facilitating communication between users. The platform provides messaging capabilities, including one-on-one conversations and group chats, with support for various message types such as text, emojis, images, and stickers.
-
 The project also emphasizes user experience and usability, with features like custom avatars and intuitive user interfaces. It aims to provide users with a visually appealing and responsive application that enhances their overall experience.
 
-Overall, the project task involves building a robust and user-friendly social media platform that caters to the diverse needs of its users, fostering connections, fostering communities, and facilitating meaningful interactions in a digital environment.
+Overall, the project task involves building a robust and user-friendly social media platform that caters to the diverse needs of its users, fostering connections and facilitating meaningful interactions in a digital environment.
 
 ## Description
 Features of this social media app:
@@ -62,7 +60,7 @@ npm install
 npm run dev
 ```
 ## Usage
-You can use the `Installation section` or just click the link: https://maqsud-instagram-qwasar.vercel.app/duck
+You can use the `Installation` section or just click the link to see deployed web-site: https://maqsud-instagram-qwasar.vercel.app/
 
 ### The Core Team
 Maqsud Yusupov (7 - main season)
