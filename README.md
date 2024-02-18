@@ -17,18 +17,33 @@ The project also emphasizes user experience and usability, with features like cu
 Overall, the project task involves building a robust and user-friendly social media platform that caters to the diverse needs of its users, fostering connections, fostering communities, and facilitating meaningful interactions in a digital environment.
 
 ## Description
-Features of this social media app
-- Login, Signup
+Features of this social media app:
 
-- Follow, Unfollow, Recommend, Profile views
+- Log in
 
-- Like, Comment, Delete post, Open post
+- Sign up
+
+- Follow
+
+- Unfollow
+
+- Recommend
+
+- Profile view
+
+- Open Post
+
+- Delete post
+
+- Comment
+
+- Like
 
 - Time ago format used everywhere
 
 - Edit your profile
 
-- Get suggestions.
+- Get suggestions
 
 - Change your avatar
 
