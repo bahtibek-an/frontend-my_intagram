@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   :root {
+      --header-height: 60px;
+      --min-height-layout: calc(100vh - var(--header-height));
+   }
+   html {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   }
+
+   body {
+      @apply bg-[#fafafa] text-default-font-size;
+   }
+
+   image,
+   video {
+      @apply block max-w-full;
+   }
+
+   button,
+   input {
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      border: none;
+      outline: none;
+   }
+
+   button {
+      cursor: pointer;
+   }
+}
+
+.container-app {
+   max-width: 988px;
+   padding: 0 24px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
