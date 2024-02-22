@@ -1,8 +1,7 @@
 # Welcome To my project Instagram clone
 Demo: [Instagram Clone](https://insagram-client.vercel.app/register)
 
-!!(Please wait a little while registering until the service API works.)!!
-
+(Please wait a little while registering until the service API works.)
 ## Description
 This project is an Instagram clone, aiming to replicate some of the core features and functionality of the popular social media platform Instagram. It provides users with the ability to create accounts, share photos, follow other users, and engage with posts through likes and comments.
 
