@@ -1,105 +1,70 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+# Instagram Clone
 
-## SPECIFICATIONS
-This project is about creating a clone of Instagram.
 
-To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
+## Task
+1. **User Authentication**: Implement user authentication to allow users to sign up, log in, and manage their profiles securely.
 
-You are free to implement the schema you want.
+2. **Post Creation**: Enable users to create posts by uploading images along with captions and other relevant details.
 
-You can also be creative on the design. You should still looks "like" instagram.
+3. **Emoji-based Commenting**: Implement a commenting system where users can add comments to posts, and support emoji-based reactions.
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+4. **Liking Posts**: Allow users to like posts and keep track of the number of likes for each post.
 
-Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
+5. **Follow/Unfollow Functionality**: Implement the ability for users to follow and unfollow each other. Users should be able to see posts from users they follow in their feed.
 
-Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
+6. **Search Bar**: Create a search bar that allows users to search for other users or posts based on usernames or content.
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+## Description
+This project is an Instagram clone built using Laravel and Vite. It replicates some of the key features of Instagram, including user authentication, post creation, emoji-based commenting, liking posts, follow/unfollow functionality, and a search bar.
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/instagram-clone.git
+   cd instagram-clone
+   ```
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+2. Install PHP dependencies using Composer:
+   ```bash
+   composer install
+   ```
 
-On the css/colors/design, you can be creative.
+3. Install JavaScript dependencies using npm:
+   ```bash
+   npm install
+   ```
 
-## FEATURES
-- Login, Signup
+4. Copy the example environment file and configure your database:
+   ```bash
+   cp .env.example .env
+   ```
 
-- Change you password.
+5. Generate an application key:
+   ```bash
+   php artisan key:generate
+   ```
 
-- Change account type private or public (Default: public).
+6. Migrate the database:
+   ```bash
+   php artisan migrate
+   ```
 
-- Indicates that users exists as you type username when signing up.
+7. Run the development server:
+   ```bash
+   php artisan serve
+   ```
 
-- About, Developer, Help, 404, No such user, No such group page.
+8. In a separate terminal, build the frontend assets:
+   ```bash
+   npm run dev
+   ```
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
+9. Access the application at `http://localhost:8000`.
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
-
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
-
-- Time ago format used everywhere.
-
-- Custom Video and Audio player.
-
-- Add tags to describe yourself much more.
-
-- Edit your profile (From username, Bio, social links to tags).
-
-- Get suggestions on whome to follow (you can also refresh suggestions).
-
-- Know what are some of the most popular hashtags.
-
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
-
-- Shows images in Theatre mode.
-
-- Explore people, photos, videos, audios and groups.
-
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
-
-- Create conversation with your followings and give your conversation a title.
-
-- Message emoji, Text, Image, Sticker.
-
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
-
-- Bookmark the post if you liked it.
-
-- Make a user favourite if you like him/her.
-
-- Create a group with your followings.
-
-- Shows newest member, members you know from the group.
-
-- Add/remove members.
-
-- Edit group's settings.
-
-- Shows if a user is online.
-
-- Love a group, invite your followings to the group.
-
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
-
-- If a text post is large, then a glimpse of the post is shown and you can load more.
-
-- You will be always prompted from deleting a post to blocking someone.
-
-- Search users, groups and hashtags.
-
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
-
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
-
-Your .gitignore must remove node_modules/
+## Usage
+1. Create an account or log in with existing credentials.
+2. Navigate to the "Create Post" section to share images and captions.
+3. Explore the feed to see posts from users you follow.
+4. Like and comment on posts using emojis.
+5. Use the search bar to find users or posts based on keywords.
+6. Follow and unfollow other users to customize your feed.
