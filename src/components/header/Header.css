@@ -1,0 +1,62 @@
+.HeaderContainer {
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(212 212 212);
+}
+
+.ContentsWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.WordLogoContainer {
+    display: block;
+    object-fit: contain;
+    height: 35px;
+}
+
+.InputContainer {
+    display: flex;
+    color: gray;
+    background-color: rgb(229 229 229);
+    align-items: center;
+    border-radius: 5px;
+    min-width: 250px;
+}
+
+.InputField {
+    background: none;
+    border: 1px solid gray;
+    max-width: 100px;
+    font-size: 15px;
+    padding: 5px;
+    border: 0px;
+}
+
+.NavOptionsContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.UserAvatarPopupContainer {
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 20px;
+    height: 15px;
+    border-radius: 0.25rem;
+    object-fit: contain;
+    height: 30px;
+    width: 30px;
+    border-radius: 99px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    border-top: 1px solid gray;
+    padding: 10px 20px;
+    cursor: pointer;
+}

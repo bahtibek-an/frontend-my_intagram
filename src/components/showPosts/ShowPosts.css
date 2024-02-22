@@ -1,0 +1,97 @@
+.PostWrap {
+    background-color: #fff;
+    margin-bottom: 30px;
+    border: 1px solid rgb(212 212 212);
+}
+
+.HeaderContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+img {
+    object-fit: contain;
+    height: 40px;
+    width: 40px;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+p {
+    flex: 1;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.DotsOptions {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    padding: 10px;
+    right: 20px;
+    top: 40px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.PostCoverPhoto {
+    object-fit: contain;
+    width: 100%;
+}
+
+.PostOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    width: 100%;
+}
+
+.CommentsContainer {
+    max-height: 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 5px;
+}
+
+.CommentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    @media (min-width: 750px) {
+        width: 250px;
+    }
+}
+
+.AddCommentContainer {
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: gray;
+}
+
+input {
+    border: 0px;
+    font-size: 15px;
+    flex: 1;
+}

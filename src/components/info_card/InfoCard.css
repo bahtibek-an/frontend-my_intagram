@@ -1,0 +1,49 @@
+.CardWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px 0;
+    @media (min-width: 900px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+h4 {
+    cursor: pointer;
+    color: #4299e1;
+    font: 20px;
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+    }
+}
+
+.UserInfoWrap {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    object-fit: contain;
+    height: 60px;
+    width: 60px;
+    border-radius: 9999px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+section {
+    flex: 1;
+}
+p {
+    color: gray;
+    font-size: 15px;
+}
+
+h5 {
+    color: rgb(115 115 115);
+    cursor: pointer;
+}

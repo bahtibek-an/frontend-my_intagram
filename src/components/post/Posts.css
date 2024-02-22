@@ -1,0 +1,38 @@
+.AddPostWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    z-index: 12;
+}
+
+.ModalContentWrapper {
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    width: 30%;
+    height: 50vh;
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+.ContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+button {
+    font-weight: 600;
+    width: 60%;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}

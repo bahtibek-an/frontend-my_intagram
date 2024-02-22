@@ -1,0 +1,44 @@
+.LoginContainer {
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+}
+
+.ContentsWrapper {
+    padding: 100px;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 12px;
+}
+
+img {
+    object-fit: contain;
+    height: 100px;
+}
+
+p {
+    color:  #4a5568;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    color: #fff;
+    background-color: #4285f4;
+    border: 1px solid #4285f4;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+h6 {
+    color: #2d3748;
+    padding: 20px;
+}
