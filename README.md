@@ -7,7 +7,7 @@ This project is an Instagram clone, aiming to replicate some of the core feature
 
 
 ## Installation
-If you want to set up a similar Instagram clone project, follow these installation steps:
+If you want to set up a similar Instagram clone project, follow these installation steps: 
 
 ``````
 cd frontend-my_instagram
