@@ -22,13 +22,9 @@ npm install
 cd server 
 npm install
 ```
-
-
-
 ## Usage
 To use the Instagram clone, follow these steps:
 ``````
-
 Start the Client:
 npm start
 ``````
@@ -39,7 +35,6 @@ Start the Backend
 npm run test
 
 ``````
-
 
 ## The core team
 
