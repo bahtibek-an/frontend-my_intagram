@@ -1,0 +1,13 @@
+.footer {
+    margin-left: 1rem;
+    
+    &__username {
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    &__caption {
+        margin-left: 0.5rem;
+        font-size: 1.4rem;
+    }
+}
