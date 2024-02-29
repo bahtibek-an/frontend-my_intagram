@@ -1,0 +1,55 @@
+// Main search container
+.search {
+    justify-self: center;
+    margin-left: 9.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    // Search input styles
+    &__input {
+        width: 19.5rem;
+        height: 2.75rem;
+        text-decoration: none;
+        border: 1px solid $color-grey-light;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        border-radius: 5px;
+        background-color: $color-grey-default;
+        text-align: center;
+        color: $color-grey-secondary;
+
+        // Styles for input focus
+        &:focus,
+        &--focused {
+            color: $color-black-dark;
+            text-align: left;
+        }
+
+        // Placeholder styles
+        &::placeholder {
+            color: $color-grey-secondary;
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-left: auto;
+        }
+    }
+
+    // Search icon styles
+    &__icon {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        left: 1rem;
+        stroke: $color-grey-secondary;
+    }
+}
+
+// Styles for focused search result
+.search-result:focus .search__input {
+    text-align: left;
+    color: red;
+}

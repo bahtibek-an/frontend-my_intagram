@@ -1,0 +1,39 @@
+.dashboard {
+    background-color: $color-grey-default;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 5vw [timeline-start] 1fr 1fr [timeline-end] 3rem [sidebar-start] 1fr [sidebar-end] 5vw;
+    
+        @media (min-width: 640px) {
+            grid-template-columns: 10vw [timeline-start] 1fr 1fr [timeline-end] 3rem [sidebar-start] 1fr [sidebar-end] 10vw;
+        }          
+
+        @media (min-width: 768px) {
+            grid-template-columns: 5vw [timeline-start] 1fr 1fr [timeline-end] 3rem [sidebar-start] 1fr [sidebar-end] 5vw;
+        }          
+
+        @media (min-width: 1024px) {
+            grid-template-columns: 10vw [timeline-start] 1fr 1fr [timeline-end] 3rem [sidebar-start] 1fr [sidebar-end] 10vw;
+        }          
+
+        @media (min-width: 1280px) {
+            grid-template-columns: 15vw [timeline-start] 1fr 1fr [timeline-end] 3rem [sidebar-start] 1fr [sidebar-end] 15vw;
+        }          
+    }
+
+    &__timeline {
+        grid-column: timeline-start / sidebar-end;
+        margin-bottom: 2rem;
+        
+        @media (min-width: 768px) {
+            grid-column: timeline-start / timeline-end;
+        }          
+    }
+
+    &__sidebar {
+        // background-color: red;
+        margin-top: 4rem;
+        grid-column: sidebar-start / sidebar-end;
+    }
+}

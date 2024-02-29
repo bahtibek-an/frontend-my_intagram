@@ -1,0 +1,32 @@
+.sug-profile {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__name {
+        margin-left: 1rem;
+        color: $color-black-dark;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}
