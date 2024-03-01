@@ -1,105 +1,78 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend my_instagram
+## Welcome To My BekaGram
 
-## SPECIFICATIONS
-This project is about creating a clone of Instagram.
+- App demo <a href="https://bekagram.netlify.app/">Bekagram</a>
 
-To do so, you will have resources. You will use ReactJS and Amplify as backend/storing your database.
+## Overview
 
-You are free to implement the schema you want.
+This project is a simple Instagram clone made using React, Vite and Chakra UI. Similar Instagram posts with user avatars, images, and captions can be accessed through the Instagram Login Register, as well as through Google. All files, usernames, likes, comments, posts and other data are stored in Firebase
 
-You can also be creative on the design. You should still looks "like" instagram.
+## Features
 
-A little about `Instagram` (source wikipedia):
-Instagram (commonly abbreviated to IG or Insta) is an American photo and video sharing social networking service created by Kevin Systrom and Mike Krieger. In April 2012, Facebook acquired the service for approximately US$1 billion in cash and stock. The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations and view trending content. Users can like photos and follow other users to add their content to a personal feed.
+-  Display Instagram-like posts with user avatars, images, and captions.
+- Built with React, Vite, and Chakra UI for a modern and responsive user interface.
+- A custom photo feed based on the people you follow
+- Post photo posts from gallery
+- View all comments on this post
+- Search by username
+- Follow / unfollow users
+- Change the image view from grid layout to ribbon layout
+- Edit profile
+- Delete the post
+- Comment on your followers' post using emoji
+- Capture function
+- Save the captured image
 
-Instagram was originally distinguished by only allowing content to be framed in a square (1:1) aspect ratio with 640 pixels to match the display width of the iPhone at the time. In 2015, these restrictions were eased with an increase to 1080 pixels. The service also added messaging features, the ability to include multiple images or videos in a single post, and a Stories feature—similar to its main opposition Snapchat—which allows users to post photos and videos to a sequential feed, with each post accessible by others for 24 hours each. As of January 2019, the Stories feature is used by 500 million users daily.
 
-Originally launched for iOS in October 2010, Instagram rapidly gained popularity, with one million registered users in two months, 10 million in a year, and 1 billion as of June 2018. The Android version was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, and an app for Windows 10 in October 2016. As of October 2015, over 40 billion photos had been uploaded. Although praised for its influence, Instagram has been the subject of criticism, most notably for policy and interface changes, allegations of censorship, and illegal or improper content uploaded by users.
+# Prerequisites
 
-## TECHNICAL REQUIREMENTS
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+- Node.js and npm installed
+- Vite React js library
+- Chakra UI library
+- Webcam library
+# Installation
+0 Clone 
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+```
+    git clone https://github.com/your-username/your-repo.git
+```
+1 Install
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+```base
+    npm install
+```
+2 Run
+```base
+    npm run dev
+```
+    
+3 Visit http://localhost:5173 in your browser to see the app.
 
-On the css/colors/design, you can be creative.
+4 Feel free to explore and contribute to the project! If you encounter any issues or have questions, please open an issue or reach out to us.
 
-## FEATURES
-- Login, Signup
+# Project Structure
 
-- Change you password.
+- `/public`: Contains static assets and files.
+- `/public/img`: in which all the pictures are placed
+- `/src`: Contains the main source code for the project.
+- `/src/components`: Where all the small components are located
+- `/src/hooks`: All hooks are located
+- `/src/config`: All Firebase configs are located
+- `/src/pages`: All main pages are located
 
-- Change account type private or public (Default: public).
 
-- Indicates that users exists as you type username when signing up.
+# Acknowledgments
 
-- About, Developer, Help, 404, No such user, No such group page.
+- [React](https://react.dev/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Vite](https://vitejs.dev/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Node Js](https://nodejs.org/en)
 
-- Follow, Unfollow, Recommend, Profile views, Block, Unblock.
 
-- Like, Comment (Sticker, Text, Image), Share, Unshare, Remove share, Tag, Untag, Remove tag, Copy post link, Delete post, Edit post, Open post.
+# Contact
 
-- Post Text, Image (with filters), Video, Audio, Link, Document, Location with emojis, Font size, Tag, mentions, hashtags and location.
+- [Telegram](https://t.me/uspa_polo_717/)
+- [Instagram](https://www.instagram.com/_bek_27_04_)
 
-- Time ago format used everywhere.
-
-- Custom Video and Audio player.
-
-- Add tags to describe yourself much more.
-
-- Edit your profile (From username, Bio, social links to tags).
-
-- Get suggestions on whome to follow (you can also refresh suggestions).
-
-- Know what are some of the most popular hashtags.
-
-- Mutual likes and comments as in Facebook (When you see a post, if your followings have liked or commented on the post, then app re-arranges post's likers and commenters in a way that your followings get the first priority). eg. F1, F2, F3 and 230 others liked where F = Following.
-
-- Shows images in Theatre mode.
-
-- Explore people, photos, videos, audios and groups.
-
-- Get notified on almost everything from your post being liked, commented, shared TO you being added to a group.
-
-- Create conversation with your followings and give your conversation a title.
-
-- Message emoji, Text, Image, Sticker.
-
-- Delete conversation, unsend all your messages, edit conversation title and get all info about the conversation.
-
-- Bookmark the post if you liked it.
-
-- Make a user favourite if you like him/her.
-
-- Create a group with your followings.
-
-- Shows newest member, members you know from the group.
-
-- Add/remove members.
-
-- Edit group's settings.
-
-- Shows if a user is online.
-
-- Love a group, invite your followings to the group.
-
-- Change your avatar from over 200 custom avatars, don't like it upload your avatar with a cropping tool (Same can be done while changing group avatar).
-
-- If a text post is large, then a glimpse of the post is shown and you can load more.
-
-- You will be always prompted from deleting a post to blocking someone.
-
-- Search users, groups and hashtags.
-
-- Click on a particular user tag such as 'Mumbaikar' and see all users with the same user tag.
-Google+ style notification bar (one that transitions from the bottom, stays 3 seconds and then goes down).
-Description provided almost everywhere eg. when you hover over Like (Heart) button, then there'll be description of 'LIKE'.
-
-You will write the url in `my_instagram_url.txt`. Nothing more, just the URL.
-
-Your .gitignore must remove node_modules/
+# Author
+- Bekzat Ilyasov
