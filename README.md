@@ -26,7 +26,7 @@ Backend: `Firebase`.
 # Usage
 Clone the repository link
 ```
-git clone <repository link>
+git clone https://github.com/aishaaboriyeva/frontend-my_intagram.git
 ```
 
 Install dependencies using:
