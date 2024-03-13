@@ -1,5 +1,5 @@
 # Welcome to My Instagram Clone
-$INSTAGRAM$
+$INSTAGRAM:$  https://diana-insta.vercel.app/
 
 # Task
 Welcome to my Instagram project!
