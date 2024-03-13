@@ -24,7 +24,8 @@ Frontend: `React.js` and `Vite`.
 Backend: `Firebase`.
 
 # Usage
-Clone the repository link
+Clone the repository to your computer:
+
 ```
 git clone https://github.com/aishaaboriyeva/frontend-my_intagram.git
 ```
