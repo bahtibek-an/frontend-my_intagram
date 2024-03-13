@@ -1,4 +1,4 @@
-# Welcome to My Instagram Clone
+# Welcome to My Frontend Instagram
 $INSTAGRAM:$  https://diana-insta.vercel.app/
 
 # Task
