@@ -1,5 +1,5 @@
 # Welcome to My Frontend Instagram
-$INSTAGRAM:$  [https://diana-insta.vercel.app/](https://insta-diana.vercel.app/)
+$INSTAGRAM:$  [Demo](https://insta-diana.vercel.app/)
 
 # Task
 Welcome to my Instagram project!
