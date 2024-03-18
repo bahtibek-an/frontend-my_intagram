@@ -1,0 +1,9 @@
+.post-image-container {
+  margin-bottom: 8px;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
