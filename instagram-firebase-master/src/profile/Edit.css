@@ -1,0 +1,86 @@
+.row{
+  margin-left: 25%;
+}
+/**
+* Panels
+*/
+/*** General styles ***/
+.panel {
+  box-shadow: none;
+
+}
+.panel-body img{
+  margin-left: 25%;
+}
+.panel-heading {
+border-bottom: 0;
+}
+.panel-title {
+font-size: 17px;
+}
+.panel-title > small {
+font-size: .75em;
+color: #999999;
+}
+.panel-body *:first-child {
+margin-top: 0;
+}
+.panel-footer {
+border-top: 0;
+}
+
+.panel-default > .panel-heading {
+  color: #333333;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.07);
+}
+
+form label {
+  color: #999999;
+  font-weight: 400;
+}
+
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 768px) {
+.form-horizontal .control-label {
+  text-align: right;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+}
+
+.profile__contact-info-icon {
+  float: left;
+  font-size: 18px;
+  color: #999999;
+}
+.profile__contact-info-body {
+  overflow: hidden;
+  padding-left: 20px;
+  color: #999999;
+}
+.profile-avatar {
+  width: 200px;
+  position: relative;
+  margin: 0px auto;
+  margin-top: 196px;
+  border: 4px solid #f3f3f3;
+}
+.link45{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  width: 100px;
+  margin-left: 12px;
+  height: 30px;
+  border: 1px solid #99999958;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #99999958;
+  box-shadow: rgba(50, 50, 93, 0.153) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.071) 0px 18px 36px -18px inset;
+}
