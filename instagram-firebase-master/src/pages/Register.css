@@ -1,0 +1,58 @@
+.register p{
+    color: rgba(0, 0, 0, 0.186);
+}
+.register h6 {
+    margin-top: 13px;
+    font-size: 11px;
+    width: 105%;
+    color: rgba(0, 0, 0, 0.31);
+    text-align: center;
+}
+.register h5 {
+    margin-top: 17px;
+    font-size: 11px;
+    width: 105%;
+    color: rgba(0, 0, 0, 0.353);
+    text-align: center;
+}
+.register a{
+    color: rgb(0, 7, 34);
+}
+
+.fecebook {
+    color: rgb(255, 255, 255);
+}
+.registerr{
+    background-color: rgba(0, 0, 0, 0.041);
+}
+.bottom1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+._aa5q {
+    height: 40px;
+}
+._a6hd._a6hd, ._a6hd._a6hd:hover {
+    text-decoration: none;
+}
+._aa5s:last-child {
+    margin-right: 0!important;
+}
+.register-cen h1{
+ text-align: center;
+}
+.text2{
+    color: rgb(0, 106, 255);
+}
+.imges .img {
+    margin-right: -142px;
+    margin-bottom: 90px;
+    display: inline-block;
+} 
+.imges .imgg{
+    margin-right: 12px;
+    margin-bottom: 90px;
+    display: inline-block;
+}
