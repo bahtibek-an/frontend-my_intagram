@@ -1,0 +1,311 @@
+.sidebar {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  padding: 0 10px 0 2px;
+  background-color: black;
+}
+
+.Instagram-home-link {
+  display: flex;
+  align-items: start;
+  padding: 15px;
+  color: white;
+}
+
+
+.Instagram-home-link-mobile {
+  display: none;
+}
+
+.sidebar-menu {
+  height: 35vh;
+  display: grid;
+  align-items: center;
+}
+
+.sidebar-menu-items {
+  padding: 15px;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.sidebar-menu-items a {
+  display: flex;
+}
+
+.sidebar-menu-items a .com-none {
+  margin-left: 10px;
+}
+
+.sidebar-menu-items:hover {
+  background-color: #292929;
+}
+
+.sidebar-menu a {
+  color: white;
+  font-size: 19px;
+}
+
+.sidebar-more {
+  display: flex;
+  align-items: end;
+  width: 100%;
+}
+
+.instagram-more-menu {
+  width: 100%;
+  display: grid;
+}
+
+.sidebar-more .instagram-more-menu .instagram-more-items {
+  padding: 15px;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.instagram-more-menu .instagram-more-items a {
+  color: white;
+  display: flex;
+  font-size: 18px;
+}
+
+.instagram-more-menu .instagram-more-items a .com-none {
+  margin-left: 10px;
+}
+
+.sidebar-more .instagram-more-items:hover {
+  background-color: #292929;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .sidebar {
+    width: 20%;
+    height: 100vh;
+    display: grid;
+    padding: 0;
+    justify-content: center;
+    background-color: black;
+  }
+
+  .Instagram-home-link {
+    display: none;
+  }
+
+  .Instagram-home-link-mobile {
+    display: flex;
+    align-items: start;
+    padding: 15px;
+    color: white;
+    justify-content: center;
+  }
+
+  .com-none {
+    display: none;
+  }
+
+  i {
+    display: flex;
+    font-size: 30px;
+    color: white;
+  }
+
+}
+
+body {
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  border-right: 1px solid rgb(38, 38, 38);
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: #f1f1f1;
+  padding-top: 22.5px;
+}
+
+
+.search-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+
+.search-input {
+  margin: 10px 20px 10px 20px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 5px;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-result {
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  width: 90%;
+  height: 50px;
+  border-radius: 20px;
+  color: #fff;
+  align-items: center;
+
+}
+
+.search-result:hover {
+  background-color: rgb(38, 38, 38);
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  height: 400px;
+  transition: .5s;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  border-radius: 20px;
+}
+
+.modal-head-upload {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-form{
+  width: 100%;
+  height: 85%;
+}
+
+.modal-form label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+.modal-form label i{
+  font-size: 100px;
+}
+
+.modal-form textarea{
+  width: 100%;
+  height: 10%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  color: white;
+
+}
+
+.modal-form textarea::placeholder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.modal-form button {
+  width: 100%;
+  height: 10%;
+  background: none;
+  border-radius: 30px;
+  border: 1px solid white;
+  color: white;
+}
+
+.modal-form button:hover {
+  background: white;
+  color: #000;
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-more {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-more {
+  display: none;
+  position: absolute;
+  background-color: rgb(12, 12, 12);
+  min-width: 160px;
+  box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  margin-top: -100px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.dropdown-content-more a {
+  border-radius: 10px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-more a:hover {
+  background-color: rgb(38, 38, 38);
+}
+
+.dropdown-more:hover .dropdown-content-more {
+  display: block;
+}
+
+
+.red {
+  color: red;
+  /* background-color: red; */
+}
+
